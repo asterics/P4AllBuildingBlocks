@@ -1,0 +1,1 @@
+java -Djava.library.path=lib\native -cp bin;lib\asterics.mw.cimcommunication.jar;lib\asterics.processor.Arduino.jar;lib\asterics.sensor.FacetrackerLK.jar;lib\native p4all.fhtw.ComponentTest
