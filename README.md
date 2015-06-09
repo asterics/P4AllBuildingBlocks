@@ -8,5 +8,5 @@ the initial version of this repository includes:
 * Webcam-based Facetracking module (belongs to Camera Input Modules)
 
 
-
+This repository is still work in progress inlcuding the License issue and is not meant for use at the moment.
 
