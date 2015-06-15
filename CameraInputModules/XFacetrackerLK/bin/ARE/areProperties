@@ -1,0 +1,15 @@
+#ARE Properties
+#Mon Jun 15 14:38:56 CEST 2015
+always_on_top=1
+undecorated=1
+ThreadPool.ModelExecutor.size=0
+showErrorDialogs=1
+ARE.hotKey.stopModel=VC_F7
+ARE.gui.font.size=18
+background_color=-11435361
+ARE.hotKey.pauseModel=VC_F6
+ARE.hotKey.startModel=VC_F5
+ThreadPoolTasks.submitTimeout=20000
+fullscreen=0
+show_side_bar=0
+iconify=0
