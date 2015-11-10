@@ -6,7 +6,7 @@ Further infos will follow!
 Try the demos here now! You need to install the [AsTeRICS demo release] (https://github.com/asterics/AsTeRICS/releases/tag/v2.7) first. Then click on lick and open it with the ARE.exe application.
 
 * <a href='https://raw.githubusercontent.com/asterics/P4AllBuildingBlocks/master/CameraInputModules/FacetrackerLK-windows/bin/ARE/models/FacetrackerMouse-no-osk.acs' download>Face tracking camera mouse demo</a>
-* [Face tracking camera mouse] (https://raw.githubusercontent.com/asterics/P4AllBuildingBlocks/master/CameraInputModules/FacetrackerLK-windows/bin/ARE/models/FacetrackerMouse-no-osk.acs)
+* [Face tracking camera mouse] (https://raw.githubusercontent.com/asterics/P4AllBuildingBlocks/master/CameraInputModules/FacetrackerLK-windows/bin/ARE/models/FacetrackerMouse-no-osk.acs){:target="_blank"}
 * [Show sensor data in html] (http://localhost:8082)
 
 
