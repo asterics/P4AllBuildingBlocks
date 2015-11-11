@@ -1,0 +1,405 @@
+<?xml version="1.0"?>
+<model xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" modelName="30.04.2014_1415" version="20130320">
+  <modelDescription>
+    <shortDescription />
+    <requirements />
+    <description />
+  </modelDescription>
+  <components>
+    <component id="Deadzone.1" type_id="asterics.Deadzone">
+      <description>Defines active/passive Zone for x/y values</description>
+      <ports>
+        <inputPort portTypeID="radius">
+          <properties />
+        </inputPort>
+        <inputPort portTypeID="inY">
+          <properties />
+        </inputPort>
+        <inputPort portTypeID="inX">
+          <properties />
+        </inputPort>
+        <outputPort portTypeID="outY">
+          <properties />
+        </outputPort>
+        <outputPort portTypeID="outX">
+          <properties />
+        </outputPort>
+      </ports>
+      <properties>
+        <property name="xCenter" value="0" />
+        <property name="radius" value="10" />
+        <property name="yCenter" value="0" />
+        <property name="mode" value="1" />
+      </properties>
+      <layout>
+        <posX>436</posX>
+        <posY>389</posY>
+      </layout>
+    </component>
+    <component id="Timer.1.2" type_id="asterics.Timer">
+      <description>measures and outputs time in milliseconds and fires events (periodically or once)</description>
+      <ports>
+        <inputPort portTypeID="period">
+          <properties />
+        </inputPort>
+        <outputPort portTypeID="time">
+          <properties />
+        </outputPort>
+      </ports>
+      <properties>
+        <property name="timePeriod" value="500" />
+        <property name="waitPeriod" value="0" />
+        <property name="repeatCounter" value="1" />
+        <property name="resolution" value="50" />
+        <property name="autostart" value="false" />
+        <property name="mode" value="0" />
+      </properties>
+      <layout>
+        <posX>334</posX>
+        <posY>642</posY>
+      </layout>
+    </component>
+    <component id="Arduino.1" type_id="asterics.Arduino">
+      <description>Arduino Microcontroller CIM</description>
+      <ports>
+        <inputPort portTypeID="pwm6">
+          <properties />
+        </inputPort>
+        <inputPort portTypeID="pwm3">
+          <properties />
+        </inputPort>
+        <inputPort portTypeID="pwm5">
+          <properties />
+        </inputPort>
+        <outputPort portTypeID="A4">
+          <properties />
+        </outputPort>
+        <outputPort portTypeID="A2">
+          <properties />
+        </outputPort>
+        <outputPort portTypeID="A1">
+          <properties />
+        </outputPort>
+        <outputPort portTypeID="A3">
+          <properties />
+        </outputPort>
+        <outputPort portTypeID="A0">
+          <properties />
+        </outputPort>
+        <outputPort portTypeID="A5">
+          <properties />
+        </outputPort>
+      </ports>
+      <properties>
+        <property name="pin13Mode" value="0" />
+        <property name="pin12Mode" value="0" />
+        <property name="pin10Mode" value="2" />
+        <property name="pin9Mode" value="2" />
+        <property name="pin5Mode" value="0" />
+        <property name="pin6Mode" value="0" />
+        <property name="pin8Mode" value="0" />
+        <property name="pin2Mode" value="0" />
+        <property name="pin7Mode" value="0" />
+        <property name="pin3Mode" value="0" />
+        <property name="pin4Mode" value="0" />
+        <property name="pin11Mode" value="0" />
+        <property name="periodicADCUpdate" value="100" />
+      </properties>
+      <layout>
+        <posX>55</posX>
+        <posY>450</posY>
+      </layout>
+    </component>
+    <component id="PathSelector.1" type_id="asterics.PathSelector">
+      <description>Pathselector routes signal to one of four output ports</description>
+      <ports>
+        <inputPort portTypeID="in">
+          <properties />
+        </inputPort>
+        <outputPort portTypeID="out3">
+          <properties />
+        </outputPort>
+        <outputPort portTypeID="out1">
+          <properties />
+        </outputPort>
+        <outputPort portTypeID="out2">
+          <properties />
+        </outputPort>
+        <outputPort portTypeID="out4">
+          <properties />
+        </outputPort>
+      </ports>
+      <properties>
+        <property name="activePorts" value="1" />
+      </properties>
+      <layout>
+        <posX>610</posX>
+        <posY>420</posY>
+      </layout>
+    </component>
+    <component id="StringDispatcher.1" type_id="asterics.StringDispatcher">
+      <description>Send test from chosen slot</description>
+      <ports>
+        <inputPort portTypeID="slotDispatch">
+          <properties />
+        </inputPort>
+        <outputPort portTypeID="output">
+          <properties />
+        </outputPort>
+      </ports>
+      <properties>
+        <property name="slot6" value="" />
+        <property name="slot7" value="" />
+        <property name="slot8" value="" />
+        <property name="slot9" value="" />
+        <property name="slot10" value="" />
+        <property name="slot20" value="" />
+        <property name="slot11" value="" />
+        <property name="slot12" value="" />
+        <property name="slot1" value="@MOUSE:nextclick,right" />
+        <property name="slot2" value="" />
+        <property name="slot3" value="" />
+        <property name="slot4" value="" />
+        <property name="slot5" value="" />
+        <property name="slot19" value="" />
+        <property name="slot18" value="" />
+        <property name="slot17" value="" />
+        <property name="slot16" value="" />
+        <property name="slot15" value="" />
+        <property name="slot14" value="" />
+        <property name="slot13" value="" />
+        <property name="delay" value="300" />
+      </properties>
+      <layout>
+        <posX>624</posX>
+        <posY>631</posY>
+      </layout>
+    </component>
+    <component id="Mouse.1" type_id="asterics.Mouse">
+      <description>Local mouse actuator, emulates mouse activity on local system</description>
+      <ports>
+        <inputPort portTypeID="mouseX">
+          <properties />
+        </inputPort>
+        <inputPort portTypeID="mouseY">
+          <properties />
+        </inputPort>
+        <inputPort portTypeID="action">
+          <properties />
+        </inputPort>
+      </ports>
+      <properties>
+        <property name="enableMouse" value="true" />
+        <property name="absolutePosition" value="False" />
+        <property name="yMin" value="0" />
+        <property name="xMax" value="2000" />
+        <property name="yMax" value="1024" />
+        <property name="xMin" value="0" />
+      </properties>
+      <layout>
+        <posX>802</posX>
+        <posY>530</posY>
+      </layout>
+    </component>
+    <component id="SignalTranslation.1" type_id="asterics.SignalTranslation">
+      <description>Translates signals from a certain input range to an output range</description>
+      <ports>
+        <inputPort portTypeID="in">
+          <properties />
+        </inputPort>
+        <inputPort portTypeID="setMin">
+          <properties />
+        </inputPort>
+        <inputPort portTypeID="setMax">
+          <properties />
+        </inputPort>
+        <outputPort portTypeID="out">
+          <properties />
+        </outputPort>
+      </ports>
+      <properties>
+        <property name="inMax" value="1023" />
+        <property name="inMin" value="0.0" />
+        <property name="outMax" value="-64" />
+        <property name="outMin" value="63" />
+      </properties>
+      <layout>
+        <posX>259</posX>
+        <posY>388</posY>
+      </layout>
+    </component>
+  </components>
+  <channels>
+    <channel id="binding.2">
+      <description />
+      <source>
+        <component id="PathSelector.1" />
+        <port id="out2" />
+      </source>
+      <target>
+        <component id="Mouse.1" />
+        <port id="mouseY" />
+      </target>
+    </channel>
+    <channel id="binding.6">
+      <description />
+      <source>
+        <component id="Deadzone.1" />
+        <port id="outX" />
+      </source>
+      <target>
+        <component id="PathSelector.1" />
+        <port id="in" />
+      </target>
+    </channel>
+    <channel id="binding.5">
+      <description />
+      <source>
+        <component id="Arduino.1" />
+        <port id="A5" />
+      </source>
+      <target>
+        <component id="SignalTranslation.1" />
+        <port id="in" />
+      </target>
+    </channel>
+    <channel id="binding.4">
+      <description />
+      <source>
+        <component id="StringDispatcher.1" />
+        <port id="output" />
+      </source>
+      <target>
+        <component id="Mouse.1" />
+        <port id="action" />
+      </target>
+    </channel>
+    <channel id="binding.1">
+      <description />
+      <source>
+        <component id="PathSelector.1" />
+        <port id="out1" />
+      </source>
+      <target>
+        <component id="Mouse.1" />
+        <port id="mouseX" />
+      </target>
+    </channel>
+    <channel id="binding.11">
+      <description />
+      <source>
+        <component id="SignalTranslation.1" />
+        <port id="out" />
+      </source>
+      <target>
+        <component id="Deadzone.1" />
+        <port id="inX" />
+      </target>
+    </channel>
+  </channels>
+  <eventChannels>
+    <eventChannel id="pin10ChangedHighToLow_leftClick">
+      <description />
+      <sources>
+        <source>
+          <component id="Arduino.1" />
+          <eventPort id="pin9ChangedLowToHigh" />
+        </source>
+      </sources>
+      <targets>
+        <target>
+          <component id="Mouse.1" />
+          <eventPort id="leftClick" />
+        </target>
+      </targets>
+    </eventChannel>
+    <eventChannel id="periodFinished_dispatchSlot1">
+      <description />
+      <sources>
+        <source>
+          <component id="Timer.1.2" />
+          <eventPort id="periodFinished" />
+        </source>
+      </sources>
+      <targets>
+        <target>
+          <component id="StringDispatcher.1" />
+          <eventPort id="dispatchSlot1" />
+        </target>
+      </targets>
+    </eventChannel>
+    <eventChannel id="pin9ChangedLowToHigh_reset">
+      <description />
+      <sources>
+        <source>
+          <component id="Arduino.1" />
+          <eventPort id="pin9ChangedLowToHigh" />
+        </source>
+      </sources>
+      <targets>
+        <target>
+          <component id="Timer.1.2" />
+          <eventPort id="reset" />
+        </target>
+      </targets>
+    </eventChannel>
+    <eventChannel id="pin10ChangedHighToLow_selectNext">
+      <description />
+      <sources>
+        <source>
+          <component id="Arduino.1" />
+          <eventPort id="pin10ChangedHighToLow" />
+        </source>
+      </sources>
+      <targets>
+        <target>
+          <component id="PathSelector.1" />
+          <eventPort id="selectNext" />
+        </target>
+      </targets>
+    </eventChannel>
+    <eventChannel id="pin9ChangedHighToLow_start">
+      <description />
+      <sources>
+        <source>
+          <component id="Arduino.1" />
+          <eventPort id="pin9ChangedHighToLow" />
+        </source>
+      </sources>
+      <targets>
+        <target>
+          <component id="Timer.1.2" />
+          <eventPort id="start" />
+        </target>
+      </targets>
+    </eventChannel>
+    <eventChannel id="pin9ChangedLowToHigh_stop">
+      <description />
+      <sources>
+        <source>
+          <component id="Arduino.1" />
+          <eventPort id="pin9ChangedLowToHigh" />
+        </source>
+      </sources>
+      <targets>
+        <target>
+          <component id="Timer.1.2" />
+          <eventPort id="stop" />
+        </target>
+      </targets>
+    </eventChannel>
+  </eventChannels>
+  <modelGUI>
+    <Decoration>false</Decoration>
+    <Fullscreen>false</Fullscreen>
+    <AlwaysOnTop>true</AlwaysOnTop>
+    <ToSystemTray>false</ToSystemTray>
+    <ShopControlPanel>false</ShopControlPanel>
+    <AREGUIWindow>
+      <posX>0</posX>
+      <posY>0</posY>
+      <width>6712</width>
+      <height>8600</height>
+    </AREGUIWindow>
+  </modelGUI>
+</model>

@@ -1,0 +1,15 @@
+<project name="asterics.xfacetrackerlk" basedir=".">
+	<property name="test" value="myval"/>
+	<xmlproperty file="bin/ARE/models/model.xml"/>
+	<loadproperties srcfile="bin/ARE/profile/loader_componentlist.ini"></loadproperties>
+	<target name="parseXML">
+		
+	</target>
+	<loadfile property="package.ABC.name" srcfile="bin/ARE/profile/loader_componentlist.ini"></loadfile>
+    <propertyregex property="pack.name"
+              input="package.ABC.name"
+              regexp="asterics.XFacetrackerLK"
+              select="\1"
+              casesensitive="false" />
+	<echoproperties/>
+</project>

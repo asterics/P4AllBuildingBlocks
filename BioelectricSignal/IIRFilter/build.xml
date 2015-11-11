@@ -1,0 +1,15 @@
+<project name="asterics.based.project" basedir="." default="merge">
+	<property name="runtime" location="build/merged/bin/ARE"/>
+	
+	<target name="merge">
+    <copy todir="${runtime}" overwrite="true">
+    	<fileset dir="bin/ARE/"/>        
+    </copy>
+	</target>
+	
+	<target name="clean">
+		<delete includeEmptyDirs="true">
+			<fileset dir="${runtime}"/>
+		</delete>
+	</target>
+</project>
