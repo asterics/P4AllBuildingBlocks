@@ -1,8 +1,8 @@
 # P4AllBuildingBlocks
-Here you find standalone deployment version of dedicated AsTeRICS components delivered as Building Blocks for the [Prosperity For All project (P4All)](http://www.prosperity4all.eu/
-). For more information about customization of Building Blocks and deployments as well as licensing options please have a look a the [Wiki](https://github.com/asterics/P4AllBuildingBlocks/wiki)
+This repository contains configuration files for deploying dedicated AsTeRICS Building Blocks, and runnable stand-alone demos for their application. A dedicated deployment tool has been developed for the [Prosperity For All project (P4All)](http://www.prosperity4all.eu/
+). For more information about customisation of Building Blocks and deployments as well as licensing options please have a look a the [Wiki](https://github.com/asterics/P4AllBuildingBlocks/wiki)
 
-The current version of this repository includes following Building Blocks:
+The current version of the repository includes configurations files for following Building Blocks:
 * Bioelectric Signal Acquisition: OpenEEG
 * Bioelectric Signal Acquisition: OpenBCI
 * Digital Signal Processing: IIRFilter
@@ -18,6 +18,8 @@ The current version of this repository includes following Building Blocks:
 * Smart Home Integration: FS20
 * Speech Recognition and Synthesis: SpeechProcessor
 
+
+A short overview of the features of these building block can be found in the [P4All Developer Space listing](http://portal.teco.edu/dspace/?q=en/):
 
 
 The demo deployment of the AsTeRICS system includes runnable versions of all these Building blocks and demo applications of their combination, including:
