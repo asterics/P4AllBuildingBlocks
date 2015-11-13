@@ -22,8 +22,10 @@ The current version of the repository includes configurations files for followin
 A short overview of the features of these building block can be found in the [P4All Developer Space listing](http://portal.teco.edu/dspace/?q=en/):
 
 
-The demo deployment of the AsTeRICS system includes runnable versions of all these Building blocks and demo applications of their combination, including:
+## Demos
+Go to the AsTeRICS [demo page](http://asterics.github.io/AsTeRICS/demos.html) to see the building blocks in action.
+The [demo release](https://github.com/asterics/P4AllBuildingBlocks/releases/tag/Cammouse-P4alldemo-v1.0) of the AsTeRICS system includes runnable versions of all these Building blocks and demo applications of their combination, including:
 * Webcam-based Facetracking
-* Data exchange with WebBrower via Websocket
+* Data exchange with WebBrowser via Websocket
 
 
