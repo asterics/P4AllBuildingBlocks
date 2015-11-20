@@ -1,0 +1,9 @@
+Package: XFacetrackerLK
+Version: 1.0.0-AsTeRICS-2.7
+Section: unknown
+Maintainer: UAS Technikum Wien - AsTeRICS
+Priority: optional
+Architecture: i386
+Provides: XFacetrackerLK
+Description: Head-controlled camera mouse
+Installed-Size: 201170
