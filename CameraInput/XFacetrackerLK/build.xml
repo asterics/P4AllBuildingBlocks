@@ -43,7 +43,7 @@
 		<fx:application id="fxApplication"
 			name="XFacetrackerLK"
 			mainClass="org.eclipse.core.runtime.adaptor.EclipseStarter"
-			version="1.0.0-AsTeRICS-2.7"
+			version="1.0.1-AsTeRICS-2.7"
 			toolkit="swing"
 		/>
 	<!-- 
@@ -91,7 +91,7 @@
 			<fx:resources refid="appRes"/>
 			<fx:info title="XFacetrackerLK - Head controlled mouse" vendor="AsTeRICS consortium - http://www.asterics.eu" description="Head controlled mouse" license="GPLv3 | MIT dual" category="Universal Access"/>
 		</fx:deploy>	
-		<move file="${build.deploy}/bundles/xfacetrackerlk-1.0.0-AsTeRICS-2.7.deb" tofile="${build.deploy}/bundles/xfacetrackerlk-javaembedded-1.0.0-AsTeRICS-2.7.deb"/>
+		<move file="${build.deploy}/bundles/xfacetrackerlk-1.0.1-AsTeRICS-2.7.deb" tofile="${build.deploy}/bundles/xfacetrackerlk-javaembedded-1.0.1-AsTeRICS-2.7.deb"/>
 	</target>
 	
 	
@@ -104,7 +104,7 @@
 		<fx:application id="fxApplication"
 			name="XFacetrackerLK"
 			mainClass="org.eclipse.core.runtime.adaptor.EclipseStarter"
-			version="1.0.0-AsTeRICS-2.7"
+			version="1.0.1-AsTeRICS-2.7"
 			toolkit="swing"
 		/>
 		<fx:platform basedir="" id="fxPlatform">
@@ -149,7 +149,7 @@
 			updatemode="background" >
 			<fx:platform refid="fxPlatform"/>
 		    
-			<fx:preferences shortcut="false" install="true" menu="false"/> 
+			<fx:preferences shortcut="false" install="true" menu="true"/> 
 			
 			<fx:application refId="fxApplication"/>
 			<fx:resources refid="appRes"/>

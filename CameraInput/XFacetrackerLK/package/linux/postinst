@@ -23,15 +23,10 @@ WRITEDIR="/var/opt/$APPNAME/"
 
 case "$1" in
     configure)
-        echo Adding shortcut to the menu
+		echo "Creating desktop menu entry"
+       	xdg-desktop-menu install --novendor /opt/XFacetrackerLK/XFacetrackerLK.desktop
 
-		if [ -d "$APPPATH/../runtime" ]; then
-			echo "Creating desktop menu entry"
-        	xdg-desktop-menu install --novendor /opt/XFacetrackerLK/XFacetrackerLK.desktop
-        fi
-
-
-		echo creating symlinks for models, profile and data folders to tmp folder
+		echo creating symlinks for models, profile and data folders to $WRITEDIR folder
 		rm -Rf $WRITEDIR
 		mkdir -p $WRITEDIR
 		mv $APPPATH/models  $WRITEDIR
@@ -46,7 +41,6 @@ case "$1" in
 		ln -sf $WRITEDIR/areProperties $APPPATH/areProperties
 	
 		chmod +x $APPPATH/start*.sh
-
 
         if [ "false" = "true" ]; then
             echo Installing daemon

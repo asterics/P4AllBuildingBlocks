@@ -22,8 +22,7 @@ WRITEDIR="/var/opt/$APPNAME/"
 
 case "$1" in
     remove|upgrade|deconfigure)
-        echo Removing shortcut
-
+        echo Removing desktop menu entry
         xdg-desktop-menu uninstall --novendor /opt/XFacetrackerLK/XFacetrackerLK.desktop
 
 
@@ -37,8 +36,8 @@ case "$1" in
                 fi
             fi
         fi
-
-	   echo Removing symbolic links and write dir
+	   
+	   echo Removing symbolic links and $WRITEDIR
 	   rm -Rf $WRITEDIR
 	   rm -f $APPPATH/modules
 	   rm -f $APPPATH/profile
