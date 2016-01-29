@@ -1,9 +1,0 @@
-[Desktop Entry]
-Name=XFacetrackerLK
-Comment=XFacetrackerLK - Head controlled mouse
-Exec=/opt/XFacetrackerLK/app/start.sh
-Icon=/opt/XFacetrackerLK/XFacetrackerLK.png
-Terminal=false
-Type=Application
-Categories=Universal Access
-
