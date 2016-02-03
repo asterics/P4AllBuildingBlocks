@@ -49,8 +49,8 @@ case "$1" in
 		ln -sf $WRITEDIR/data $APPPATH/data
 		ln -sf $WRITEDIR/areProperties $APPPATH/areProperties
 	
-		chmod -R g-wx $WRITEDIR
-		chmod -R o-wx $WRITEDIR
+		chmod -R g-w $WRITEDIR
+		chmod -R o-w $WRITEDIR
 		chmod -R u+wx $WRITEDIR
 	
 		chmod +x $APPPATH/start*.sh
