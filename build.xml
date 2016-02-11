@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project name="asterics-application" default="deploy" basedir="." xmlns:fx="javafx:com.sun.javafx.tools.ant">
+<project name="asterics-application" default="run-APE" basedir="." xmlns:fx="javafx:com.sun.javafx.tools.ant">
 	<import file="imported.xml"/>
 	
 	<!-- if you want to compile and modify something on your own, before the installer is created -->
@@ -12,9 +12,12 @@
 			<property name="P4All.mergedCustomDir" value="${basedir}/custom"></property>
 	        <fileset dir="." includes="**/*/build.xml" excludes="."/>
 		</subant>
-		<copy file="custom/bin/ARE/models/"
+		<copy todir="custom" overwrite="true" verbose="true">
+			<fileset dir="custom-bundleddemo"/>
+		</copy>
+
 	</target>
-		
+			
 	<target name="deploy" depends="init-fx-tasks, cleanup, setup-staging-area, run-APE, before-deploy, make-installer-only">
 	</target>
 			
