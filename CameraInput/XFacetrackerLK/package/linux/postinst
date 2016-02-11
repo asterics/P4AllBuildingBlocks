@@ -1,5 +1,5 @@
 #!/bin/sh
-# postinst script for XFacetrackerLK
+# postinst script
 #
 # see: dh_installdeb(1)
 
@@ -17,18 +17,23 @@ set -e
 # for details, see http://www.debian.org/doc/debian-policy/ or
 # the debian-policy package
 
-APPNAME="XFacetrackerLK"
+#source appname
+#. APE.properties
+APPNAME="$DPKG_MAINTSCRIPT_PACKAGE"
 APPPATH="/opt/$APPNAME/app/"
+APPINSTALLDIR="/opt/$APPNAME"
 WRITEDIR="/var/opt/$APPNAME/"
 
 case "$1" in
     configure)
+
+    echo $DPKG_MAINTSCRIPT_PACKAGE
         echo Adding shortcut to the menu
 
-		if [ -d "$APPPATH/../runtime" ]; then
-			echo "Creating desktop menu entry"
-        	xdg-desktop-menu install --novendor /opt/XFacetrackerLK/XFacetrackerLK.desktop
-        fi
+		#if [ -d "$APPPATH/../runtime" ]; then
+			echo "Creating desktop menu entry $APPNAME"
+        	xdg-desktop-menu install --novendor $APPINSTALLDIR/$APPNAME.desktop
+        #fi
 
 
 		echo creating symlinks for models, profile and data folders to tmp folder
@@ -39,32 +44,45 @@ case "$1" in
 		mv $APPPATH/data $WRITEDIR
 		mv $APPPATH/areProperties $WRITEDIR
 	
-		chmod -R o+w $WRITEDIR
 		ln -sf $WRITEDIR/models $APPPATH/models
 		ln -sf $WRITEDIR/profile $APPPATH/profile
 		ln -sf $WRITEDIR/data $APPPATH/data
 		ln -sf $WRITEDIR/areProperties $APPPATH/areProperties
 	
+		chmod -R g-w $WRITEDIR
+		chmod -R o-w $WRITEDIR
+		chmod -R u+wx $WRITEDIR
+	
 		chmod +x $APPPATH/start*.sh
+		
+		#embedded start-script to .bin and replace it with a shell script
+		mv $APPINSTALLDIR/$APPNAME $APPINSTALLDIR/$APPNAME.bin
+		
+		cat << 'EOF' >> $APPINSTALLDIR/$APPNAME
+#!/bin/sh
+SCRIPTDIR="$(dirname "$0")"
+APPNAME=$(basename $SCRIPTDIR)
 
-
-        if [ "false" = "true" ]; then
-            echo Installing daemon
-            cp /opt/XFacetrackerLK/xfacetrackerlk.init /etc/init.d/xfacetrackerlk
-
-            if [ -x "/etc/init.d/xfacetrackerlk" ]; then
-                update-rc.d xfacetrackerlk defaults
-
-                if [ "false" = "true" ]; then
-                    if which invoke-rc.d >/dev/null 2>&1; then
-                        invoke-rc.d xfacetrackerlk start
-                    else
-                        /etc/init.d/xfacetrackerlk start
-                    fi
-                fi
-	        fi
-
+SUDO_CMD=sudo
+if [ -f /usr/bin/gksudo ] ; then
+        SUDO_CMD=/usr/bin/gksudo
+else
+        if [ -f /usr/bin/kdesudo ] ; then
+                SUDO_CMD=/usr/bin/kdesudo
         fi
+fi
+
+START_CMD="$SCRIPTDIR/app/start.sh $@"
+if [ -d "$SCRIPTDIR/runtime" ]; then
+        START_CMD="$SCRIPTDIR/$APPNAME.bin $@"
+fi
+
+echo Starting $SUDO_CMD $START_CMD
+$SUDO_CMD $START_CMD
+EOF
+
+	    chmod +x $APPINSTALLDIR/$APPNAME
+		
     ;;
 
     abort-upgrade|abort-remove|abort-deconfigure)
