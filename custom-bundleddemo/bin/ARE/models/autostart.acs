@@ -1,0 +1,108 @@
+<?xml version="1.0"?>
+<model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" modelName="D:\AsTeRICS\AsTeRICS_Licensing_Packaging_Asterics_2_8_Prep\bin\ARE\models\merged\bin\ARE\models\demomenu.acs_2016_2_11_12_6" version="20130320">
+  <modelDescription>
+    <shortDescription>A menu selection for some demo models which do not need special hardware.</shortDescription>
+    <requirements>none</requirements>
+    <description>The Cellboard plugin is used as an On-Screen selection with automatic scanning. The desired Model can be started by pressing the Spacebar key on the keyboard.</description>
+  </modelDescription>
+  <components>
+    <component id="TextDisplay.1" type_id="asterics.TextDisplay">
+      <description>GUI component, which displays text.</description>
+      <ports>
+        <inputPort portTypeID="input">
+          <properties />
+        </inputPort>
+      </ports>
+      <properties>
+        <property name="caption" value="" />
+        <property name="default" value="AsTeRICS Prosperity4All Building Blocks Demos!" />
+        <property name="textPosition" value="1" />
+        <property name="textColor" value="0" />
+        <property name="backgroundColor" value="11" />
+        <property name="displayGUI" value="true" />
+      </properties>
+      <layout>
+        <posX>154</posX>
+        <posY>184</posY>
+      </layout>
+      <gui>
+        <posX>135</posX>
+        <posY>787</posY>
+        <width>3250</width>
+        <height>333</height>
+      </gui>
+    </component>
+    <component id="TextDisplay.1.1.1" type_id="asterics.TextDisplay">
+      <description>GUI component, which displays text.</description>
+      <ports>
+        <inputPort portTypeID="input">
+          <properties />
+        </inputPort>
+      </ports>
+      <properties>
+        <property name="caption" value="" />
+        <property name="default" value="W=Win, L=Linux, M=Mac" />
+        <property name="textPosition" value="1" />
+        <property name="textColor" value="0" />
+        <property name="backgroundColor" value="11" />
+        <property name="displayGUI" value="true" />
+      </properties>
+      <layout>
+        <posX>339</posX>
+        <posY>233</posY>
+      </layout>
+      <gui>
+        <posX>135</posX>
+        <posY>2121</posY>
+        <width>3250</width>
+        <height>333</height>
+      </gui>
+    </component>
+    <component id="InfoBox (TextArea)" type_id="asterics.TextArea">
+      <description>GUI component, which displays text.</description>
+      <ports>
+        <inputPort portTypeID="setText">
+          <properties />
+        </inputPort>
+        <inputPort portTypeID="appendText">
+          <properties />
+        </inputPort>
+        <outputPort portTypeID="text">
+          <properties />
+        </outputPort>
+      </ports>
+      <properties>
+        <property name="caption" value="Info" />
+        <property name="default" value="Open the demo files with the &quot;Choose a new model&quot; button in the control panel. Some demos require additional SW or HW. The letters W, L, M indicate the supported platforms for a demo." />
+        <property name="editable" value="false" />
+        <property name="fontSize" value="16" />
+        <property name="textColor" value="1" />
+        <property name="backgroundColor" value="11" />
+        <property name="displayGUI" value="true" />
+      </properties>
+      <layout>
+        <posX>170</posX>
+        <posY>381</posY>
+      </layout>
+      <gui>
+        <posX>135</posX>
+        <posY>1121</posY>
+        <width>3250</width>
+        <height>1000</height>
+      </gui>
+    </component>
+  </components>
+  <modelGUI>
+    <Decoration>true</Decoration>
+    <Fullscreen>false</Fullscreen>
+    <AlwaysOnTop>false</AlwaysOnTop>
+    <ToSystemTray>false</ToSystemTray>
+    <ShopControlPanel>true</ShopControlPanel>
+    <AREGUIWindow>
+      <posX>75</posX>
+      <posY>244</posY>
+      <width>3625</width>
+      <height>2444</height>
+    </AREGUIWindow>
+  </modelGUI>
+</model>

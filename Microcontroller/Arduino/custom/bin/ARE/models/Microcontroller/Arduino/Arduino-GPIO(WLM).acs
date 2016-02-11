@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" modelName="C:\AsTeRICS\bin\ACS\models\useCaseDemos\arduino\Arduino_test.acs_2015_10_9_14_6" version="20130320">
+<model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" modelName="D:\AsTeRICS\AsTeRICS_Licensing_Packaging_Asterics_2_8_Prep\bin\ARE\models\merged\bin\ARE\models\Microcontroller\Arduino\Arduino-GPIO(WLM).acs_2016_2_11_14_52" version="20130320">
   <components>
     <component id="Arduino.1" type_id="asterics.Arduino">
       <description>Arduino Microcontroller CIM</description>
@@ -79,10 +79,10 @@
         <posY>65</posY>
       </layout>
       <gui>
-        <posX>175</posX>
-        <posY>800</posY>
-        <width>4900</width>
-        <height>1700</height>
+        <posX>197</posX>
+        <posY>1343</posY>
+        <width>4625</width>
+        <height>1667</height>
       </gui>
     </component>
     <component id="EventVisualizer.1" type_id="asterics.EventVisualizer">
@@ -96,10 +96,10 @@
         <posY>239</posY>
       </layout>
       <gui>
-        <posX>2537</posX>
-        <posY>2667</posY>
-        <width>2400</width>
-        <height>2600</height>
+        <posX>2510</posX>
+        <posY>3010</posY>
+        <width>2312</width>
+        <height>2667</height>
       </gui>
     </component>
     <component id="ButtonGrid.1" type_id="asterics.ButtonGrid">
@@ -161,8 +161,8 @@
         <posY>199</posY>
       </layout>
       <gui>
-        <posX>188</posX>
-        <posY>2578</posY>
+        <posX>197</posX>
+        <posY>3010</posY>
         <width>2300</width>
         <height>2700</height>
       </gui>
@@ -194,10 +194,43 @@
         <posY>144</posY>
       </layout>
       <gui>
-        <posX>5212</posX>
-        <posY>778</posY>
-        <width>1300</width>
-        <height>4500</height>
+        <posX>4885</posX>
+        <posY>1343</posY>
+        <width>1250</width>
+        <height>4333</height>
+      </gui>
+    </component>
+    <component id="InfoBox (TextArea)" type_id="asterics.TextArea">
+      <description>GUI component, which displays text.</description>
+      <ports>
+        <inputPort portTypeID="setText">
+          <properties />
+        </inputPort>
+        <inputPort portTypeID="appendText">
+          <properties />
+        </inputPort>
+        <outputPort portTypeID="text">
+          <properties />
+        </outputPort>
+      </ports>
+      <properties>
+        <property name="caption" value="Info" />
+        <property name="default" value="Needs and Arduino Uno microcontroller and to be flashed with the Arduino CIM firmware provided with the AsTeRICS installation. For more info go to https://github.com/asterics/AsTeRICS/tree/master/CIMs/Arduino and http://asterics.github.io/AsTeRICS/AsTeRICS-Help/master/Plugins/processors/Arduino.htm" />
+        <property name="editable" value="false" />
+        <property name="fontSize" value="14" />
+        <property name="textColor" value="10" />
+        <property name="backgroundColor" value="11" />
+        <property name="displayGUI" value="true" />
+      </properties>
+      <layout>
+        <posX>159</posX>
+        <posY>368</posY>
+      </layout>
+      <gui>
+        <posX>197</posX>
+        <posY>454</posY>
+        <width>5938</width>
+        <height>778</height>
       </gui>
     </component>
   </components>
@@ -402,8 +435,8 @@
     <AREGUIWindow>
       <posX>0</posX>
       <posY>0</posY>
-      <width>7275</width>
-      <height>5911</height>
+      <width>6625</width>
+      <height>5778</height>
     </AREGUIWindow>
   </modelGUI>
 </model>

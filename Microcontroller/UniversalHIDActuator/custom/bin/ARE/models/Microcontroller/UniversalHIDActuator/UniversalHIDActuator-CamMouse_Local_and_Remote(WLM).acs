@@ -1,0 +1,891 @@
+<?xml version="1.0"?>
+<model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" modelName="D:\AsTeRICS\AsTeRICS_Licensing_Packaging_Asterics_2_8_Prep\bin\ARE\models\merged\bin\ARE\models\Microcontroller\UniversalHIDActuator\UniversalHIDActuator-CamMouse_Local_and_Remote(WLM).acs_2016_2_11_15_53" version="20130320">
+  <components>
+    <component id="Mouse.1" type_id="asterics.Mouse">
+      <description>Local mouse actuator, emulates mouse activity on local system</description>
+      <ports>
+        <inputPort portTypeID="mouseX" sync="true">
+          <properties />
+        </inputPort>
+        <inputPort portTypeID="mouseY" sync="true">
+          <properties />
+        </inputPort>
+        <inputPort portTypeID="action">
+          <properties />
+        </inputPort>
+      </ports>
+      <properties>
+        <property name="enableMouse" value="True" />
+        <property name="absolutePosition" value="False" />
+        <property name="xMin" value="0" />
+        <property name="xMax" value="0" />
+        <property name="yMin" value="0" />
+        <property name="yMax" value="0" />
+      </properties>
+      <layout>
+        <posX>1086</posX>
+        <posY>74</posY>
+      </layout>
+    </component>
+    <component id="EventFlipFlop.1" type_id="asterics.EventFlipFlop">
+      <description>Event Flip-flop: First event-in fires event-out1, second event-in fires event-out2, etc.</description>
+      <ports />
+      <properties />
+      <layout>
+        <posX>76</posX>
+        <posY>591</posY>
+      </layout>
+    </component>
+    <component id="Slider.1.1" type_id="asterics.Slider">
+      <description>a slider GUI element which provides the slider value at an output port</description>
+      <ports>
+        <inputPort portTypeID="setValue">
+          <properties />
+        </inputPort>
+        <inputPort portTypeID="in">
+          <properties />
+        </inputPort>
+        <outputPort portTypeID="value">
+          <properties />
+        </outputPort>
+        <outputPort portTypeID="out">
+          <properties />
+        </outputPort>
+      </ports>
+      <properties>
+        <property name="min" value="0" />
+        <property name="max" value="100" />
+        <property name="default" value="20" />
+        <property name="gain" value="0.01" />
+        <property name="autosend" value="true" />
+        <property name="caption" value="Mouse Speed" />
+        <property name="majorTickSpacing" value="20" />
+        <property name="minorTickSpacing" value="5" />
+        <property name="alignment" value="0" />
+        <property name="fontSize" value="14" />
+        <property name="storeValue" value="false" />
+        <property name="displayGUI" value="true" />
+      </properties>
+      <layout>
+        <posX>282</posX>
+        <posY>66</posY>
+      </layout>
+      <gui>
+        <posX>72</posX>
+        <posY>1565</posY>
+        <width>2875</width>
+        <height>667</height>
+      </gui>
+    </component>
+    <component id="TextDisplay.1.1" type_id="asterics.TextDisplay">
+      <description>GUI component, which displays text.</description>
+      <ports>
+        <inputPort portTypeID="input">
+          <properties />
+        </inputPort>
+      </ports>
+      <properties>
+        <property name="caption" value=" Current" />
+        <property name="default" value="local" />
+        <property name="textPosition" value="1" />
+        <property name="textColor" value="0" />
+        <property name="backgroundColor" value="11" />
+        <property name="displayGUI" value="true" />
+      </properties>
+      <layout>
+        <posX>366</posX>
+        <posY>588</posY>
+      </layout>
+      <gui>
+        <posX>2385</posX>
+        <posY>2343</posY>
+        <width>562</width>
+        <height>556</height>
+      </gui>
+    </component>
+    <component id="MathEvaluator.2.1" type_id="asterics.MathEvaluator">
+      <description>Mathematical expression evaluator</description>
+      <ports>
+        <inputPort portTypeID="inA">
+          <properties />
+        </inputPort>
+        <inputPort portTypeID="inB">
+          <properties />
+        </inputPort>
+        <inputPort portTypeID="inC">
+          <properties />
+        </inputPort>
+        <inputPort portTypeID="inD">
+          <properties />
+        </inputPort>
+        <outputPort portTypeID="out">
+          <properties />
+        </outputPort>
+      </ports>
+      <properties>
+        <property name="expression" value="a*(b/20)" />
+      </properties>
+      <layout>
+        <posX>444</posX>
+        <posY>7</posY>
+      </layout>
+    </component>
+    <component id="MathEvaluator.2.1.1" type_id="asterics.MathEvaluator">
+      <description>Mathematical expression evaluator</description>
+      <ports>
+        <inputPort portTypeID="inA">
+          <properties />
+        </inputPort>
+        <inputPort portTypeID="inB">
+          <properties />
+        </inputPort>
+        <inputPort portTypeID="inC">
+          <properties />
+        </inputPort>
+        <inputPort portTypeID="inD">
+          <properties />
+        </inputPort>
+        <outputPort portTypeID="out">
+          <properties />
+        </outputPort>
+      </ports>
+      <properties>
+        <property name="expression" value="a*(b/20)" />
+      </properties>
+      <layout>
+        <posX>441</posX>
+        <posY>149</posY>
+      </layout>
+    </component>
+    <component id="RemoteMouse.1" type_id="asterics.RemoteMouse">
+      <description>Remote mouse emulation via HID actuator</description>
+      <ports>
+        <inputPort portTypeID="mouseX">
+          <properties />
+        </inputPort>
+        <inputPort portTypeID="mouseY">
+          <properties />
+        </inputPort>
+        <inputPort portTypeID="action">
+          <properties />
+        </inputPort>
+      </ports>
+      <properties>
+        <property name="absolutePosition" value="False" />
+        <property name="centerX" value="300" />
+        <property name="centerY" value="150" />
+        <property name="uniqueID" value="not used" />
+      </properties>
+      <layout>
+        <posX>1114</posX>
+        <posY>409</posY>
+      </layout>
+    </component>
+    <component id="PathSelector.1" type_id="asterics.PathSelector">
+      <description>Pathselector routes signal to one of four output ports</description>
+      <ports>
+        <inputPort portTypeID="in">
+          <properties />
+        </inputPort>
+        <outputPort portTypeID="out1">
+          <properties />
+        </outputPort>
+        <outputPort portTypeID="out2">
+          <properties />
+        </outputPort>
+        <outputPort portTypeID="out3">
+          <properties />
+        </outputPort>
+        <outputPort portTypeID="out4">
+          <properties />
+        </outputPort>
+      </ports>
+      <properties>
+        <property name="activePorts" value="1" />
+      </properties>
+      <layout>
+        <posX>725</posX>
+        <posY>13</posY>
+      </layout>
+    </component>
+    <component id="PathSelector.2" type_id="asterics.PathSelector">
+      <description>Pathselector routes signal to one of four output ports</description>
+      <ports>
+        <inputPort portTypeID="in">
+          <properties />
+        </inputPort>
+        <outputPort portTypeID="out1">
+          <properties />
+        </outputPort>
+        <outputPort portTypeID="out2">
+          <properties />
+        </outputPort>
+        <outputPort portTypeID="out3">
+          <properties />
+        </outputPort>
+        <outputPort portTypeID="out4">
+          <properties />
+        </outputPort>
+      </ports>
+      <properties>
+        <property name="activePorts" value="1" />
+      </properties>
+      <layout>
+        <posX>752</posX>
+        <posY>201</posY>
+      </layout>
+    </component>
+    <component id="StringDispatcher.1.1" type_id="asterics.StringDispatcher">
+      <description>Send test from chosen slot</description>
+      <ports>
+        <outputPort portTypeID="output">
+          <properties />
+        </outputPort>
+        <inputPort portTypeID="slotDispatch">
+          <properties />
+        </inputPort>
+      </ports>
+      <properties>
+        <property name="delay" value="300" />
+        <property name="slot1" value="@MOUSE:action,toggle" />
+        <property name="slot2" value="@MOUSE:nextclick,drag" />
+        <property name="slot3" value="@MOUSE:nextclick,right" />
+        <property name="slot4" value="@MOUSE:nextclick,double" />
+        <property name="slot5" value="@MOUSE:nextclick,left" />
+        <property name="slot6" value="" />
+        <property name="slot7" value="" />
+        <property name="slot8" value="" />
+        <property name="slot9" value="" />
+        <property name="slot10" value="" />
+        <property name="slot11" value="" />
+        <property name="slot12" value="" />
+        <property name="slot13" value="" />
+        <property name="slot14" value="" />
+        <property name="slot15" value="" />
+        <property name="slot16" value="" />
+        <property name="slot17" value="" />
+        <property name="slot18" value="" />
+        <property name="slot19" value="" />
+        <property name="slot20" value="" />
+      </properties>
+      <layout>
+        <posX>748</posX>
+        <posY>374</posY>
+      </layout>
+    </component>
+    <component id="EventRouter.1" type_id="asterics.EventRouter">
+      <description>routes incoming events to one of 8 event trigger ports</description>
+      <ports>
+        <inputPort portTypeID="routeIndex">
+          <properties />
+        </inputPort>
+      </ports>
+      <properties>
+        <property name="activeRoutes" value="2" />
+        <property name="wrapAround" value="true" />
+      </properties>
+      <layout>
+        <posX>761</posX>
+        <posY>576</posY>
+      </layout>
+    </component>
+    <component id="TextDisplay.1" type_id="asterics.TextDisplay">
+      <description>GUI component, which displays text.</description>
+      <ports>
+        <inputPort portTypeID="input">
+          <properties />
+        </inputPort>
+      </ports>
+      <properties>
+        <property name="caption" value="Change mouse" />
+        <property name="default" value="Press SPACE to change mouse" />
+        <property name="textPosition" value="1" />
+        <property name="textColor" value="0" />
+        <property name="backgroundColor" value="11" />
+        <property name="displayGUI" value="true" />
+      </properties>
+      <layout>
+        <posX>221</posX>
+        <posY>800</posY>
+      </layout>
+      <gui>
+        <posX>72</posX>
+        <posY>2343</posY>
+        <width>2312</width>
+        <height>556</height>
+      </gui>
+    </component>
+    <component id="KeyCapture.1" type_id="asterics.KeyCapture">
+      <description>captures key presses and releases for a single keyboard key</description>
+      <ports>
+        <inputPort portTypeID="keyCode">
+          <properties />
+        </inputPort>
+      </ports>
+      <properties>
+        <property name="keyCode" value="57" />
+        <property name="block" value="false" />
+      </properties>
+      <layout>
+        <posX>71</posX>
+        <posY>306</posY>
+      </layout>
+    </component>
+    <component id="StringDispatcher.2" type_id="asterics.StringDispatcher">
+      <description>Send text from chosen slot</description>
+      <ports>
+        <outputPort portTypeID="output">
+          <properties />
+        </outputPort>
+        <inputPort portTypeID="slotDispatch">
+          <properties />
+        </inputPort>
+      </ports>
+      <properties>
+        <property name="delay" value="300" />
+        <property name="slot1" value="local" />
+        <property name="slot2" value="remote" />
+        <property name="slot3" value="" />
+        <property name="slot4" value="" />
+        <property name="slot5" value="" />
+        <property name="slot6" value="" />
+        <property name="slot7" value="" />
+        <property name="slot8" value="" />
+        <property name="slot9" value="" />
+        <property name="slot10" value="" />
+        <property name="slot11" value="" />
+        <property name="slot12" value="" />
+        <property name="slot13" value="" />
+        <property name="slot14" value="" />
+        <property name="slot15" value="" />
+        <property name="slot16" value="" />
+        <property name="slot17" value="" />
+        <property name="slot18" value="" />
+        <property name="slot19" value="" />
+        <property name="slot20" value="" />
+      </properties>
+      <layout>
+        <posX>229</posX>
+        <posY>593</posY>
+      </layout>
+    </component>
+    <component id="InfoBox (TextArea)" type_id="asterics.TextArea">
+      <description>GUI component, which displays text.</description>
+      <ports>
+        <inputPort portTypeID="setText">
+          <properties />
+        </inputPort>
+        <inputPort portTypeID="appendText">
+          <properties />
+        </inputPort>
+        <outputPort portTypeID="text">
+          <properties />
+        </outputPort>
+      </ports>
+      <properties>
+        <property name="caption" value="Info" />
+        <property name="default" value="Change between local or remote mouse control. Requirements: UniversalHIDActuator; Plug in the HID actuator at the target computer and pair both computers. Press F7 to stop model." />
+        <property name="editable" value="false" />
+        <property name="fontSize" value="14" />
+        <property name="textColor" value="10" />
+        <property name="backgroundColor" value="11" />
+        <property name="displayGUI" value="true" />
+      </properties>
+      <layout>
+        <posX>86</posX>
+        <posY>809</posY>
+      </layout>
+      <gui>
+        <posX>72</posX>
+        <posY>676</posY>
+        <width>2875</width>
+        <height>778</height>
+      </gui>
+    </component>
+    <component id="MouseCapture.1" type_id="asterics.MouseCapture">
+      <description>Captures mouse cursor activity from local system</description>
+      <ports>
+        <outputPort portTypeID="mouseX">
+          <properties />
+        </outputPort>
+        <outputPort portTypeID="mouseY">
+          <properties />
+        </outputPort>
+      </ports>
+      <properties>
+        <property name="blockEvents" value="true" />
+      </properties>
+      <layout>
+        <posX>34</posX>
+        <posY>53</posY>
+      </layout>
+    </component>
+  </components>
+  <channels>
+    <channel id="binding.26">
+      <source>
+        <component id="MouseCapture.1" />
+        <port id="mouseX" />
+      </source>
+      <target>
+        <component id="MathEvaluator.2.1" />
+        <port id="inA" />
+      </target>
+    </channel>
+    <channel id="binding.25">
+      <source>
+        <component id="StringDispatcher.1.1" />
+        <port id="output" />
+      </source>
+      <target>
+        <component id="Mouse.1" />
+        <port id="action" />
+      </target>
+    </channel>
+    <channel id="binding.30">
+      <source>
+        <component id="MouseCapture.1" />
+        <port id="mouseY" />
+      </source>
+      <target>
+        <component id="MathEvaluator.2.1.1" />
+        <port id="inA" />
+      </target>
+    </channel>
+    <channel id="binding.14">
+      <source>
+        <component id="Slider.1.1" />
+        <port id="value" />
+      </source>
+      <target>
+        <component id="MathEvaluator.2.1.1" />
+        <port id="inB" />
+      </target>
+    </channel>
+    <channel id="binding.15">
+      <source>
+        <component id="Slider.1.1" />
+        <port id="value" />
+      </source>
+      <target>
+        <component id="MathEvaluator.2.1" />
+        <port id="inB" />
+      </target>
+    </channel>
+    <channel id="binding.18">
+      <source>
+        <component id="PathSelector.1" />
+        <port id="out1" />
+      </source>
+      <target>
+        <component id="Mouse.1" />
+        <port id="mouseX" />
+      </target>
+    </channel>
+    <channel id="binding.19">
+      <source>
+        <component id="MathEvaluator.2.1.1" />
+        <port id="out" />
+      </source>
+      <target>
+        <component id="PathSelector.2" />
+        <port id="in" />
+      </target>
+    </channel>
+    <channel id="binding.20">
+      <source>
+        <component id="MathEvaluator.2.1" />
+        <port id="out" />
+      </source>
+      <target>
+        <component id="PathSelector.1" />
+        <port id="in" />
+      </target>
+    </channel>
+    <channel id="binding.21">
+      <source>
+        <component id="PathSelector.1" />
+        <port id="out2" />
+      </source>
+      <target>
+        <component id="RemoteMouse.1" />
+        <port id="mouseX" />
+      </target>
+    </channel>
+    <channel id="binding.22">
+      <source>
+        <component id="PathSelector.2" />
+        <port id="out1" />
+      </source>
+      <target>
+        <component id="Mouse.1" />
+        <port id="mouseY" />
+      </target>
+    </channel>
+    <channel id="binding.23">
+      <source>
+        <component id="PathSelector.2" />
+        <port id="out2" />
+      </source>
+      <target>
+        <component id="RemoteMouse.1" />
+        <port id="mouseY" />
+      </target>
+    </channel>
+    <channel id="binding.11">
+      <source>
+        <component id="StringDispatcher.2" />
+        <port id="output" />
+      </source>
+      <target>
+        <component id="TextDisplay.1.1" />
+        <port id="input" />
+      </target>
+    </channel>
+  </channels>
+  <eventChannels>
+    <eventChannel id="keyPressed_dispatchSlot5">
+      <description />
+      <sources>
+        <source>
+          <component id="KeyCapture.1" />
+          <eventPort id="keyPressed" />
+        </source>
+      </sources>
+      <targets>
+        <target>
+          <component id="StringDispatcher.1.1" />
+          <eventPort id="dispatchSlot5" />
+        </target>
+      </targets>
+    </eventChannel>
+    <eventChannel id="keyPressed_selectNext">
+      <description />
+      <sources>
+        <source>
+          <component id="KeyCapture.1" />
+          <eventPort id="keyPressed" />
+        </source>
+      </sources>
+      <targets>
+        <target>
+          <component id="PathSelector.2" />
+          <eventPort id="selectNext" />
+        </target>
+      </targets>
+    </eventChannel>
+    <eventChannel id="keyPressed_selectNext">
+      <description />
+      <sources>
+        <source>
+          <component id="KeyCapture.1" />
+          <eventPort id="keyPressed" />
+        </source>
+      </sources>
+      <targets>
+        <target>
+          <component id="PathSelector.1" />
+          <eventPort id="selectNext" />
+        </target>
+      </targets>
+    </eventChannel>
+    <eventChannel id="leftButtonPressed_eventIn">
+      <description />
+      <sources>
+        <source>
+          <component id="MouseCapture.1" />
+          <eventPort id="leftButtonPressed" />
+        </source>
+      </sources>
+      <targets>
+        <target>
+          <component id="EventRouter.1" />
+          <eventPort id="eventIn" />
+        </target>
+      </targets>
+    </eventChannel>
+    <eventChannel id="middleButtonPressed_eventIn2">
+      <description />
+      <sources>
+        <source>
+          <component id="MouseCapture.1" />
+          <eventPort id="middleButtonPressed" />
+        </source>
+      </sources>
+      <targets>
+        <target>
+          <component id="EventRouter.1" />
+          <eventPort id="eventIn2" />
+        </target>
+      </targets>
+    </eventChannel>
+    <eventChannel id="rightButtonPressed_eventIn3">
+      <description />
+      <sources>
+        <source>
+          <component id="MouseCapture.1" />
+          <eventPort id="rightButtonPressed" />
+        </source>
+      </sources>
+      <targets>
+        <target>
+          <component id="EventRouter.1" />
+          <eventPort id="eventIn3" />
+        </target>
+      </targets>
+    </eventChannel>
+    <eventChannel id="wheelUp_eventIn4">
+      <description />
+      <sources>
+        <source>
+          <component id="MouseCapture.1" />
+          <eventPort id="wheelUp" />
+        </source>
+      </sources>
+      <targets>
+        <target>
+          <component id="EventRouter.1" />
+          <eventPort id="eventIn4" />
+        </target>
+      </targets>
+    </eventChannel>
+    <eventChannel id="wheelDown_eventIn5">
+      <description />
+      <sources>
+        <source>
+          <component id="MouseCapture.1" />
+          <eventPort id="wheelDown" />
+        </source>
+      </sources>
+      <targets>
+        <target>
+          <component id="EventRouter.1" />
+          <eventPort id="eventIn5" />
+        </target>
+      </targets>
+    </eventChannel>
+    <eventChannel id="eventOut1_leftClick">
+      <description />
+      <sources>
+        <source>
+          <component id="EventRouter.1" />
+          <eventPort id="eventOut1" />
+        </source>
+      </sources>
+      <targets>
+        <target>
+          <component id="Mouse.1" />
+          <eventPort id="leftClick" />
+        </target>
+      </targets>
+    </eventChannel>
+    <eventChannel id="eventOut2_1_middleClick">
+      <description />
+      <sources>
+        <source>
+          <component id="EventRouter.1" />
+          <eventPort id="eventOut2_1" />
+        </source>
+      </sources>
+      <targets>
+        <target>
+          <component id="Mouse.1" />
+          <eventPort id="middleClick" />
+        </target>
+      </targets>
+    </eventChannel>
+    <eventChannel id="eventOut3_1_rightClick">
+      <description />
+      <sources>
+        <source>
+          <component id="EventRouter.1" />
+          <eventPort id="eventOut3_1" />
+        </source>
+      </sources>
+      <targets>
+        <target>
+          <component id="Mouse.1" />
+          <eventPort id="rightClick" />
+        </target>
+      </targets>
+    </eventChannel>
+    <eventChannel id="eventOut4_1_wheelUp">
+      <description />
+      <sources>
+        <source>
+          <component id="EventRouter.1" />
+          <eventPort id="eventOut4_1" />
+        </source>
+      </sources>
+      <targets>
+        <target>
+          <component id="Mouse.1" />
+          <eventPort id="wheelUp" />
+        </target>
+      </targets>
+    </eventChannel>
+    <eventChannel id="eventOut5_1_wheelDown">
+      <description />
+      <sources>
+        <source>
+          <component id="EventRouter.1" />
+          <eventPort id="eventOut5_1" />
+        </source>
+      </sources>
+      <targets>
+        <target>
+          <component id="Mouse.1" />
+          <eventPort id="wheelDown" />
+        </target>
+      </targets>
+    </eventChannel>
+    <eventChannel id="eventOut2_leftClick">
+      <description />
+      <sources>
+        <source>
+          <component id="EventRouter.1" />
+          <eventPort id="eventOut2" />
+        </source>
+      </sources>
+      <targets>
+        <target>
+          <component id="RemoteMouse.1" />
+          <eventPort id="leftClick" />
+        </target>
+      </targets>
+    </eventChannel>
+    <eventChannel id="eventOut2_2_middleClick">
+      <description />
+      <sources>
+        <source>
+          <component id="EventRouter.1" />
+          <eventPort id="eventOut2_2" />
+        </source>
+      </sources>
+      <targets>
+        <target>
+          <component id="RemoteMouse.1" />
+          <eventPort id="middleClick" />
+        </target>
+      </targets>
+    </eventChannel>
+    <eventChannel id="eventOut3_2_rightClick">
+      <description />
+      <sources>
+        <source>
+          <component id="EventRouter.1" />
+          <eventPort id="eventOut3_2" />
+        </source>
+      </sources>
+      <targets>
+        <target>
+          <component id="RemoteMouse.1" />
+          <eventPort id="rightClick" />
+        </target>
+      </targets>
+    </eventChannel>
+    <eventChannel id="eventOut4_2_wheelUp">
+      <description />
+      <sources>
+        <source>
+          <component id="EventRouter.1" />
+          <eventPort id="eventOut4_2" />
+        </source>
+      </sources>
+      <targets>
+        <target>
+          <component id="RemoteMouse.1" />
+          <eventPort id="wheelUp" />
+        </target>
+      </targets>
+    </eventChannel>
+    <eventChannel id="eventOut5_2_wheelDown">
+      <description />
+      <sources>
+        <source>
+          <component id="EventRouter.1" />
+          <eventPort id="eventOut5_2" />
+        </source>
+      </sources>
+      <targets>
+        <target>
+          <component id="RemoteMouse.1" />
+          <eventPort id="wheelDown" />
+        </target>
+      </targets>
+    </eventChannel>
+    <eventChannel id="keyPressed_selectNext">
+      <description />
+      <sources>
+        <source>
+          <component id="KeyCapture.1" />
+          <eventPort id="keyPressed" />
+        </source>
+      </sources>
+      <targets>
+        <target>
+          <component id="EventRouter.1" />
+          <eventPort id="selectNext" />
+        </target>
+      </targets>
+    </eventChannel>
+    <eventChannel id="keyPressed_event-in">
+      <description />
+      <sources>
+        <source>
+          <component id="KeyCapture.1" />
+          <eventPort id="keyPressed" />
+        </source>
+      </sources>
+      <targets>
+        <target>
+          <component id="EventFlipFlop.1" />
+          <eventPort id="event-in" />
+        </target>
+      </targets>
+    </eventChannel>
+    <eventChannel id="event-out1_dispatchSlot1">
+      <description />
+      <sources>
+        <source>
+          <component id="EventFlipFlop.1" />
+          <eventPort id="event-out2" />
+        </source>
+      </sources>
+      <targets>
+        <target>
+          <component id="StringDispatcher.2" />
+          <eventPort id="dispatchSlot1" />
+        </target>
+      </targets>
+    </eventChannel>
+    <eventChannel id="event-out2_dispatchSlot2">
+      <description />
+      <sources>
+        <source>
+          <component id="EventFlipFlop.1" />
+          <eventPort id="event-out1" />
+        </source>
+      </sources>
+      <targets>
+        <target>
+          <component id="StringDispatcher.2" />
+          <eventPort id="dispatchSlot2" />
+        </target>
+      </targets>
+    </eventChannel>
+  </eventChannels>
+  <modelGUI>
+    <Decoration>true</Decoration>
+    <Fullscreen>false</Fullscreen>
+    <AlwaysOnTop>false</AlwaysOnTop>
+    <ToSystemTray>false</ToSystemTray>
+    <ShopControlPanel>true</ShopControlPanel>
+    <AREGUIWindow>
+      <posX>0</posX>
+      <posY>0</posY>
+      <width>3500</width>
+      <height>3111</height>
+    </AREGUIWindow>
+  </modelGUI>
+</model>

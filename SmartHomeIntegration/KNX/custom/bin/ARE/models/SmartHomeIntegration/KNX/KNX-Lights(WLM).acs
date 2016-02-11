@@ -1,0 +1,457 @@
+<?xml version="1.0"?>
+<model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" modelName="D:\AsTeRICS\AsTeRICS_Licensing_Packaging_Asterics_2_8_Prep\bin\ARE\models\merged\bin\ARE\models\SmartHomeIntegration\KNX\KNX-Lights(WLM).acs_2016_2_11_16_59" version="20130320">
+  <modelDescription>
+    <shortDescription>KNX Demo application
+This model controls the lightning of the KNX Gamma Trainingskit.</shortDescription>
+    <requirements>A KNX infrastructure.
+A little knowlege about KNX.</requirements>
+    <description>This is an example model showing how to interface a KNX infrastructure. 
+It shows three different possibilities to do this. The easiest way is to use the sliders,
+which are intended to be used to interface dimming actuators. The slider always sends
+integer values to the groupaddress specified by the plugin properties.
+The second way to send data to a KNX group address is by the 6 event listeners. 
+Each of them can be configured individually by the plugin properties. 
+The most universal way to send KNX commands is to use the
+command input of the KNX plugin. It expects a special formatted string and parses
+the dedicated keywords and format to a KNX command. The string can be assembled
+individually with other string formatting plugins.
+</description>
+  </modelDescription>
+  <components>
+    <component id="ButtonGrid.2" type_id="asterics.ButtonGrid">
+      <description>Keyboard which sends event after button press</description>
+      <ports />
+      <properties>
+        <property name="caption" value="Keyboard" />
+        <property name="horizontalOrientation" value="false" />
+        <property name="textColor" value="13" />
+        <property name="backgroundColor" value="13" />
+        <property name="borderColor" value="13" />
+        <property name="borderThickness" value="2" />
+        <property name="selectionFrameColor" value="13" />
+        <property name="selectionFrameThickness" value="4" />
+        <property name="displayGUI" value="true" />
+        <property name="buttonCaption1" value="Light dining table on" />
+        <property name="buttonCaption2" value="Light dining table off" />
+        <property name="buttonCaption3" value="Light office 1 on" />
+        <property name="buttonCaption4" value="Light office 1 off" />
+        <property name="buttonCaption5" value="Light office 2 on" />
+        <property name="buttonCaption6" value="Light office 2 off" />
+        <property name="buttonCaption7" value="" />
+        <property name="buttonCaption8" value="" />
+        <property name="buttonCaption9" value="" />
+        <property name="buttonCaption10" value="" />
+        <property name="buttonCaption11" value="" />
+        <property name="buttonCaption12" value="" />
+        <property name="buttonCaption13" value="" />
+        <property name="buttonCaption14" value="" />
+        <property name="buttonCaption15" value="" />
+        <property name="buttonCaption16" value="" />
+        <property name="buttonCaption17" value="" />
+        <property name="buttonCaption18" value="" />
+        <property name="buttonCaption19" value="" />
+        <property name="buttonCaption20" value="" />
+        <property name="toolTip1" value="" />
+        <property name="toolTip2" value="" />
+        <property name="toolTip3" value="" />
+        <property name="toolTip4" value="" />
+        <property name="toolTip5" value="" />
+        <property name="toolTip6" value="" />
+        <property name="toolTip7" value="" />
+        <property name="toolTip8" value="" />
+        <property name="toolTip9" value="" />
+        <property name="toolTip10" value="" />
+        <property name="toolTip11" value="" />
+        <property name="toolTip12" value="" />
+        <property name="toolTip13" value="" />
+        <property name="toolTip14" value="" />
+        <property name="toolTip15" value="" />
+        <property name="toolTip16" value="" />
+        <property name="toolTip17" value="" />
+        <property name="toolTip18" value="" />
+        <property name="toolTip19" value="" />
+        <property name="toolTip20" value="" />
+      </properties>
+      <layout>
+        <posX>160</posX>
+        <posY>21</posY>
+      </layout>
+      <gui>
+        <posX>72</posX>
+        <posY>2232</posY>
+        <width>2625</width>
+        <height>4889</height>
+      </gui>
+    </component>
+    <component id="Knx.1" type_id="asterics.Knx">
+      <description>My Plugin description</description>
+      <ports>
+        <inputPort portTypeID="command">
+          <properties />
+        </inputPort>
+        <inputPort portTypeID="slider1">
+          <properties />
+        </inputPort>
+        <inputPort portTypeID="slider2">
+          <properties />
+        </inputPort>
+        <inputPort portTypeID="slider3">
+          <properties />
+        </inputPort>
+        <inputPort portTypeID="slider4">
+          <properties />
+        </inputPort>
+        <inputPort portTypeID="slider5">
+          <properties />
+        </inputPort>
+        <inputPort portTypeID="slider6">
+          <properties />
+        </inputPort>
+      </ports>
+      <properties>
+        <property name="localIP" value="172.22.0.213" />
+        <property name="KNXNetIP" value="172.22.0.20" />
+        <property name="NAT" value="true" />
+        <property name="groupAddress1" value="1/1/0" />
+        <property name="dataType1" value="boolean" />
+        <property name="dataValue1" value="1" />
+        <property name="groupAddress2" value="1/1/0" />
+        <property name="dataType2" value="boolean" />
+        <property name="dataValue2" value="0" />
+        <property name="groupAddress3" value="1/1/4" />
+        <property name="dataType3" value="boolean" />
+        <property name="dataValue3" value="1" />
+        <property name="groupAddress4" value="1/1/4" />
+        <property name="dataType4" value="boolean" />
+        <property name="dataValue4" value="0" />
+        <property name="groupAddress5" value="1/1/5" />
+        <property name="dataType5" value="boolean" />
+        <property name="dataValue5" value="1" />
+        <property name="groupAddress6" value="1/1/5" />
+        <property name="dataType6" value="boolean" />
+        <property name="dataValue6" value="0" />
+        <property name="groupAddressSlider1" value="1/1/100" />
+        <property name="groupAddressSlider2" value="1/1/101" />
+        <property name="groupAddressSlider3" value="1/1/102" />
+        <property name="groupAddressSlider4" value="1/1/103" />
+        <property name="groupAddressSlider5" value="1/1/104" />
+        <property name="groupAddressSlider6" value="1/1/105" />
+        <property name="groupAddressTrigger1" value="1/1/94" />
+        <property name="groupAddressTrigger2" value="1/1/95" />
+        <property name="groupAddressTrigger3" value="1/1/1" />
+        <property name="groupAddressTrigger4" value="1/1/1" />
+        <property name="groupAddressTrigger5" value="1/1/1" />
+        <property name="groupAddressTrigger6" value="1/1/1" />
+      </properties>
+      <layout>
+        <posX>408</posX>
+        <posY>128</posY>
+      </layout>
+    </component>
+    <component id="StringDispatcher.1" type_id="asterics.StringDispatcher">
+      <description>Send text from chosen slot</description>
+      <ports>
+        <outputPort portTypeID="output">
+          <properties />
+        </outputPort>
+        <inputPort portTypeID="slotDispatch">
+          <properties />
+        </inputPort>
+      </ports>
+      <properties>
+        <property name="delay" value="300" />
+        <property name="slot1" value="@KNX:1/1/0,1.001,on" />
+        <property name="slot2" value="@KNX:1/1/0,1.001,off" />
+        <property name="slot3" value="@KNX:1/1/4,1.001,on" />
+        <property name="slot4" value="@KNX:1/1/4,1.001,off" />
+        <property name="slot5" value="@KNX:1/1/5,1.001,on" />
+        <property name="slot6" value="@KNX:1/1/5,1.001,off" />
+        <property name="slot7" value="" />
+        <property name="slot8" value="" />
+        <property name="slot9" value="" />
+        <property name="slot10" value="" />
+        <property name="slot11" value="" />
+        <property name="slot12" value="" />
+        <property name="slot13" value="" />
+        <property name="slot14" value="" />
+        <property name="slot15" value="" />
+        <property name="slot16" value="" />
+        <property name="slot17" value="" />
+        <property name="slot18" value="" />
+        <property name="slot19" value="" />
+        <property name="slot20" value="" />
+      </properties>
+      <layout>
+        <posX>152</posX>
+        <posY>306</posY>
+      </layout>
+    </component>
+    <component id="InfoBox (TextArea)" type_id="asterics.TextArea">
+      <description>GUI component, which displays text.</description>
+      <ports>
+        <inputPort portTypeID="setText">
+          <properties />
+        </inputPort>
+        <inputPort portTypeID="appendText">
+          <properties />
+        </inputPort>
+        <outputPort portTypeID="text">
+          <properties />
+        </outputPort>
+      </ports>
+      <properties>
+        <property name="caption" value="Info" />
+        <property name="default" value="The KNX plugin let's you send commands to and receive commands from a KNX router. Requiremetns: KNX HW and configured KNX network (http://www.knx.org/knx-en/index.php); Plugin: http://asterics.github.io/AsTeRICS/AsTeRICS-Help/master/Plugins/actuators/Knx.htm" />
+        <property name="editable" value="false" />
+        <property name="fontSize" value="14" />
+        <property name="textColor" value="10" />
+        <property name="backgroundColor" value="11" />
+        <property name="displayGUI" value="true" />
+      </properties>
+      <layout>
+        <posX>173</posX>
+        <posY>493</posY>
+      </layout>
+      <gui>
+        <posX>72</posX>
+        <posY>565</posY>
+        <width>2625</width>
+        <height>1556</height>
+      </gui>
+    </component>
+    <component id="TextArea.1" type_id="asterics.TextArea">
+      <description>GUI component, which displays text.</description>
+      <ports>
+        <inputPort portTypeID="setText">
+          <properties />
+        </inputPort>
+        <inputPort portTypeID="appendText">
+          <properties />
+        </inputPort>
+        <outputPort portTypeID="text">
+          <properties />
+        </outputPort>
+      </ports>
+      <properties>
+        <property name="caption" value="Debug output" />
+        <property name="default" value="" />
+        <property name="editable" value="false" />
+        <property name="fontSize" value="14" />
+        <property name="textColor" value="0" />
+        <property name="backgroundColor" value="11" />
+        <property name="displayGUI" value="true" />
+      </properties>
+      <layout>
+        <posX>291</posX>
+        <posY>307</posY>
+      </layout>
+      <gui>
+        <posX>72</posX>
+        <posY>7232</posY>
+        <width>2625</width>
+        <height>1444</height>
+      </gui>
+    </component>
+  </components>
+  <channels>
+    <channel id="binding.7">
+      <source>
+        <component id="StringDispatcher.1" />
+        <port id="output" />
+      </source>
+      <target>
+        <component id="TextArea.1" />
+        <port id="appendText" />
+      </target>
+    </channel>
+  </channels>
+  <eventChannels>
+    <eventChannel id="button1_send1">
+      <sources>
+        <source>
+          <component id="ButtonGrid.2" />
+          <eventPort id="button1" />
+        </source>
+      </sources>
+      <targets>
+        <target>
+          <component id="Knx.1" />
+          <eventPort id="send1" />
+        </target>
+      </targets>
+    </eventChannel>
+    <eventChannel id="button2_send2">
+      <sources>
+        <source>
+          <component id="ButtonGrid.2" />
+          <eventPort id="button2" />
+        </source>
+      </sources>
+      <targets>
+        <target>
+          <component id="Knx.1" />
+          <eventPort id="send2" />
+        </target>
+      </targets>
+    </eventChannel>
+    <eventChannel id="button3_send3">
+      <sources>
+        <source>
+          <component id="ButtonGrid.2" />
+          <eventPort id="button3" />
+        </source>
+      </sources>
+      <targets>
+        <target>
+          <component id="Knx.1" />
+          <eventPort id="send3" />
+        </target>
+      </targets>
+    </eventChannel>
+    <eventChannel id="button4_send4">
+      <sources>
+        <source>
+          <component id="ButtonGrid.2" />
+          <eventPort id="button4" />
+        </source>
+      </sources>
+      <targets>
+        <target>
+          <component id="Knx.1" />
+          <eventPort id="send4" />
+        </target>
+      </targets>
+    </eventChannel>
+    <eventChannel id="button5_send5">
+      <sources>
+        <source>
+          <component id="ButtonGrid.2" />
+          <eventPort id="button5" />
+        </source>
+      </sources>
+      <targets>
+        <target>
+          <component id="Knx.1" />
+          <eventPort id="send5" />
+        </target>
+      </targets>
+    </eventChannel>
+    <eventChannel id="button6_send6">
+      <sources>
+        <source>
+          <component id="ButtonGrid.2" />
+          <eventPort id="button6" />
+        </source>
+      </sources>
+      <targets>
+        <target>
+          <component id="Knx.1" />
+          <eventPort id="send6" />
+        </target>
+      </targets>
+    </eventChannel>
+    <eventChannel id="button1_dispatchSlot1">
+      <description />
+      <sources>
+        <source>
+          <component id="ButtonGrid.2" />
+          <eventPort id="button1" />
+        </source>
+      </sources>
+      <targets>
+        <target>
+          <component id="StringDispatcher.1" />
+          <eventPort id="dispatchSlot1" />
+        </target>
+      </targets>
+    </eventChannel>
+    <eventChannel id="button2_dispatchSlot2">
+      <description />
+      <sources>
+        <source>
+          <component id="ButtonGrid.2" />
+          <eventPort id="button2" />
+        </source>
+      </sources>
+      <targets>
+        <target>
+          <component id="StringDispatcher.1" />
+          <eventPort id="dispatchSlot2" />
+        </target>
+      </targets>
+    </eventChannel>
+    <eventChannel id="button3_dispatchSlot3">
+      <description />
+      <sources>
+        <source>
+          <component id="ButtonGrid.2" />
+          <eventPort id="button3" />
+        </source>
+      </sources>
+      <targets>
+        <target>
+          <component id="StringDispatcher.1" />
+          <eventPort id="dispatchSlot3" />
+        </target>
+      </targets>
+    </eventChannel>
+    <eventChannel id="button4_dispatchSlot4">
+      <description />
+      <sources>
+        <source>
+          <component id="ButtonGrid.2" />
+          <eventPort id="button4" />
+        </source>
+      </sources>
+      <targets>
+        <target>
+          <component id="StringDispatcher.1" />
+          <eventPort id="dispatchSlot4" />
+        </target>
+      </targets>
+    </eventChannel>
+    <eventChannel id="button5_dispatchSlot5">
+      <description />
+      <sources>
+        <source>
+          <component id="ButtonGrid.2" />
+          <eventPort id="button5" />
+        </source>
+      </sources>
+      <targets>
+        <target>
+          <component id="StringDispatcher.1" />
+          <eventPort id="dispatchSlot5" />
+        </target>
+      </targets>
+    </eventChannel>
+    <eventChannel id="button6_dispatchSlot6">
+      <description />
+      <sources>
+        <source>
+          <component id="ButtonGrid.2" />
+          <eventPort id="button6" />
+        </source>
+      </sources>
+      <targets>
+        <target>
+          <component id="StringDispatcher.1" />
+          <eventPort id="dispatchSlot6" />
+        </target>
+      </targets>
+    </eventChannel>
+  </eventChannels>
+  <modelGUI>
+    <Decoration>true</Decoration>
+    <Fullscreen>false</Fullscreen>
+    <AlwaysOnTop>false</AlwaysOnTop>
+    <ToSystemTray>false</ToSystemTray>
+    <ShopControlPanel>true</ShopControlPanel>
+    <AREGUIWindow>
+      <posX>0</posX>
+      <posY>0</posY>
+      <width>3188</width>
+      <height>8778</height>
+    </AREGUIWindow>
+  </modelGUI>
+</model>

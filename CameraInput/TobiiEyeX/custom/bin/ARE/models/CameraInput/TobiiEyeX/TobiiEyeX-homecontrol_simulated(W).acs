@@ -1,0 +1,532 @@
+<?xml version="1.0"?>
+<model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" modelName="D:\AsTeRICS\AsTeRICS_Licensing_Packaging_Asterics_2_8_Prep\bin\ARE\models\merged\bin\ARE\models\CameraInput\TobiiEyeX\TobiiEyeX-homecontrol_simulated(W).acs_2016_2_11_13_49" version="20130320">
+  <modelDescription>
+    <shortDescription />
+    <requirements />
+    <description />
+  </modelDescription>
+  <components>
+    <component id="EyeX.1" type_id="asterics.EyeX">
+      <description>interfaces to the EyeX Gaze tracking system</description>
+      <ports>
+        <inputPort portTypeID="xOffset">
+          <properties />
+        </inputPort>
+        <inputPort portTypeID="yOffset">
+          <properties />
+        </inputPort>
+        <outputPort portTypeID="gazeX">
+          <properties />
+        </outputPort>
+        <outputPort portTypeID="gazeY">
+          <properties />
+        </outputPort>
+        <outputPort portTypeID="posX">
+          <properties />
+        </outputPort>
+        <outputPort portTypeID="posY">
+          <properties />
+        </outputPort>
+        <outputPort portTypeID="fixationTime">
+          <properties />
+        </outputPort>
+        <outputPort portTypeID="closeTime">
+          <properties />
+        </outputPort>
+      </ports>
+      <properties>
+        <property name="enabled" value="true" />
+        <property name="averaging" value="4" />
+        <property name="minBlinkTime" value="50" />
+        <property name="midBlinkTime" value="200" />
+        <property name="maxBlinkTime" value="1000" />
+        <property name="fixationTime" value="700" />
+        <property name="pupilPositionMode" value="0" />
+        <property name="offsetCorrectionRadius" value="150" />
+        <property name="offsetCorrectionMode" value="0" />
+      </properties>
+      <layout>
+        <posX>99</posX>
+        <posY>64</posY>
+      </layout>
+    </component>
+    <component id="CellBoard.1" type_id="asterics.CellBoard">
+      <description>Adjustable matrix of button cells with scanning support</description>
+      <ports>
+        <inputPort portTypeID="row">
+          <properties />
+        </inputPort>
+        <inputPort portTypeID="column">
+          <properties />
+        </inputPort>
+        <inputPort portTypeID="cellNumber">
+          <properties />
+        </inputPort>
+        <inputPort portTypeID="xmlFile">
+          <properties />
+        </inputPort>
+        <outputPort portTypeID="actCell">
+          <properties />
+        </outputPort>
+        <outputPort portTypeID="actCellCaption">
+          <properties />
+        </outputPort>
+        <outputPort portTypeID="actCellText">
+          <properties />
+        </outputPort>
+        <outputPort portTypeID="selectedCell">
+          <properties />
+        </outputPort>
+        <outputPort portTypeID="selectedCellCaption">
+          <properties />
+        </outputPort>
+        <outputPort portTypeID="selectedCellText">
+          <properties />
+        </outputPort>
+        <outputPort portTypeID="scanRow">
+          <properties />
+        </outputPort>
+        <outputPort portTypeID="scanColumn">
+          <properties />
+        </outputPort>
+      </ports>
+      <properties>
+        <property name="caption" value="Cell Board" />
+        <property name="rows" value="1" />
+        <property name="columns" value="2" />
+        <property name="textColor" value="12" />
+        <property name="backgroundColor" value="4" />
+        <property name="scanColor" value="10" />
+        <property name="scanMode" value="4" />
+        <property name="scanCycles" value="3" />
+        <property name="hoverTime" value="1000" />
+        <property name="hoverIndicator" value="0" />
+        <property name="hoverFrameThickness" value="4" />
+        <property name="enableEdit" value="true" />
+        <property name="enableClickSelection" value="true" />
+        <property name="commandSeparator" value="" />
+        <property name="keyboardFile" value="" />
+        <property name="ignoreKeyboardFileProperties" value="false" />
+        <property name="displayGUI" value="true" />
+        <property name="cellText1" value="TV volume up" />
+        <property name="cellImage1" value="" />
+        <property name="actionText1" value="TV volume up" />
+        <property name="cellText2" value="Channel+" />
+        <property name="cellImage2" value="" />
+        <property name="actionText2" value="Next channel" />
+        <property name="cellText3" value="Switch on lights" />
+        <property name="cellImage3" value="" />
+        <property name="actionText3" value="Switch on lights" />
+        <property name="cellText4" value="TV volume down" />
+        <property name="cellImage4" value="" />
+        <property name="actionText4" value="TV volume down" />
+        <property name="cellText5" value="Channel-" />
+        <property name="cellImage5" value="" />
+        <property name="actionText5" value="Previous channel" />
+        <property name="cellText6" value="Switch off lights" />
+        <property name="cellImage6" value="" />
+        <property name="actionText6" value="Switch off lights" />
+        <property name="cellText7" value="" />
+        <property name="cellImage7" value="" />
+        <property name="actionText7" value="" />
+        <property name="cellText8" value="" />
+        <property name="cellImage8" value="" />
+        <property name="actionText8" value="" />
+        <property name="cellText9" value="" />
+        <property name="cellImage9" value="" />
+        <property name="actionText9" value="" />
+        <property name="cellText10" value="" />
+        <property name="cellImage10" value="" />
+        <property name="actionText10" value="" />
+        <property name="cellText11" value="" />
+        <property name="cellImage11" value="" />
+        <property name="actionText11" value="" />
+        <property name="cellText12" value="" />
+        <property name="cellImage12" value="" />
+        <property name="actionText12" value="" />
+        <property name="cellText13" value="" />
+        <property name="cellImage13" value="" />
+        <property name="actionText13" value="" />
+        <property name="cellText14" value="" />
+        <property name="cellImage14" value="" />
+        <property name="actionText14" value="" />
+        <property name="cellText15" value="" />
+        <property name="cellImage15" value="" />
+        <property name="actionText15" value="" />
+        <property name="cellText16" value="" />
+        <property name="cellImage16" value="" />
+        <property name="actionText16" value="" />
+        <property name="cellText17" value="" />
+        <property name="cellImage17" value="" />
+        <property name="actionText17" value="" />
+        <property name="cellText18" value="" />
+        <property name="cellImage18" value="" />
+        <property name="actionText18" value="" />
+        <property name="cellText19" value="" />
+        <property name="cellImage19" value="" />
+        <property name="actionText19" value="" />
+        <property name="cellText20" value="" />
+        <property name="cellImage20" value="" />
+        <property name="actionText20" value="" />
+        <property name="cellText21" value="" />
+        <property name="cellImage21" value="" />
+        <property name="actionText21" value="" />
+        <property name="cellText22" value="" />
+        <property name="cellImage22" value="" />
+        <property name="actionText22" value="" />
+        <property name="cellText23" value="" />
+        <property name="cellImage23" value="" />
+        <property name="actionText23" value="" />
+        <property name="cellText24" value="" />
+        <property name="cellImage24" value="" />
+        <property name="actionText24" value="" />
+        <property name="cellText25" value="" />
+        <property name="cellImage25" value="" />
+        <property name="actionText25" value="" />
+        <property name="cellText26" value="" />
+        <property name="cellImage26" value="" />
+        <property name="actionText26" value="" />
+        <property name="cellText27" value="" />
+        <property name="cellImage27" value="" />
+        <property name="actionText27" value="" />
+        <property name="cellText28" value="" />
+        <property name="cellImage28" value="" />
+        <property name="actionText28" value="" />
+        <property name="cellText29" value="" />
+        <property name="cellImage29" value="" />
+        <property name="actionText29" value="" />
+        <property name="cellText30" value="" />
+        <property name="cellImage30" value="" />
+        <property name="actionText30" value="" />
+        <property name="cellText31" value="" />
+        <property name="cellImage31" value="" />
+        <property name="actionText31" value="" />
+        <property name="cellText32" value="" />
+        <property name="cellImage32" value="" />
+        <property name="actionText32" value="" />
+        <property name="cellText33" value="" />
+        <property name="cellImage33" value="" />
+        <property name="actionText33" value="" />
+        <property name="cellText34" value="" />
+        <property name="cellImage34" value="" />
+        <property name="actionText34" value="" />
+        <property name="cellText35" value="" />
+        <property name="cellImage35" value="" />
+        <property name="actionText35" value="" />
+        <property name="cellText36" value="" />
+        <property name="cellImage36" value="" />
+        <property name="actionText36" value="" />
+      </properties>
+      <layout>
+        <posX>331</posX>
+        <posY>0</posY>
+      </layout>
+      <gui>
+        <posX>10</posX>
+        <posY>1010</posY>
+        <width>10000</width>
+        <height>9000</height>
+      </gui>
+    </component>
+    <component id="Mouse.1" type_id="asterics.Mouse">
+      <description>Local mouse actuator, emulates mouse activity on local system</description>
+      <ports>
+        <inputPort portTypeID="mouseX">
+          <properties />
+        </inputPort>
+        <inputPort portTypeID="mouseY">
+          <properties />
+        </inputPort>
+        <inputPort portTypeID="action">
+          <properties />
+        </inputPort>
+      </ports>
+      <properties>
+        <property name="enableMouse" value="True" />
+        <property name="absolutePosition" value="true" />
+        <property name="xMin" value="0" />
+        <property name="xMax" value="0" />
+        <property name="yMin" value="0" />
+        <property name="yMax" value="0" />
+      </properties>
+      <layout>
+        <posX>706</posX>
+        <posY>107</posY>
+      </layout>
+    </component>
+    <component id="Averager.1" type_id="asterics.Averager">
+      <description>Linked list-based averager or accumulator</description>
+      <ports>
+        <inputPort portTypeID="input">
+          <properties />
+        </inputPort>
+        <outputPort portTypeID="output">
+          <properties />
+        </outputPort>
+      </ports>
+      <properties>
+        <property name="bufferSize" value="20" />
+        <property name="mode" value="0" />
+      </properties>
+      <layout>
+        <posX>588</posX>
+        <posY>58</posY>
+      </layout>
+    </component>
+    <component id="Averager.1.1" type_id="asterics.Averager">
+      <description>Linked list-based averager or accumulator</description>
+      <ports>
+        <inputPort portTypeID="input">
+          <properties />
+        </inputPort>
+        <outputPort portTypeID="output">
+          <properties />
+        </outputPort>
+      </ports>
+      <properties>
+        <property name="bufferSize" value="20" />
+        <property name="mode" value="0" />
+      </properties>
+      <layout>
+        <posX>578</posX>
+        <posY>201</posY>
+      </layout>
+    </component>
+    <component id="MidiPlayer.1.1" type_id="asterics.MidiPlayer">
+      <description>This plugin is used for MIDI applications</description>
+      <ports>
+        <inputPort portTypeID="trigger">
+          <properties />
+        </inputPort>
+        <inputPort portTypeID="pitch">
+          <properties />
+        </inputPort>
+        <inputPort portTypeID="instrument">
+          <properties />
+        </inputPort>
+        <inputPort portTypeID="scale">
+          <properties />
+        </inputPort>
+      </ports>
+      <properties>
+        <property name="midiDevice" value="Gervill" />
+        <property name="channel" value="1" />
+        <property name="instrument" value="Vibraphone  " />
+        <property name="triggerThreshold" value="50" />
+        <property name="triggerMax" value="100" />
+        <property name="pitchMin" value="0" />
+        <property name="pitchMax" value="1000" />
+        <property name="toneScale" value="alltones.sc" />
+        <property name="playOnlyChangingNotes" value="False" />
+        <property name="displayGUI" value="False" />
+        <property name="displayNoteNames" value="false" />
+      </properties>
+      <layout>
+        <posX>517</posX>
+        <posY>365</posY>
+      </layout>
+      <gui>
+        <posX>1</posX>
+        <posY>466</posY>
+        <width>812</width>
+        <height>823</height>
+      </gui>
+    </component>
+    <component id="ConstantDispatcher.1.1" type_id="asterics.ConstantDispatcher">
+      <description>Send double values from chosen slot</description>
+      <ports>
+        <inputPort portTypeID="slotDispatch">
+          <properties />
+        </inputPort>
+        <outputPort portTypeID="output">
+          <properties />
+        </outputPort>
+      </ports>
+      <properties>
+        <property name="number" value="20" />
+        <property name="delay" value="300" />
+        <property name="slot1" value="400" />
+        <property name="slot2" value="0" />
+        <property name="slot3" value="0" />
+        <property name="slot4" value="0" />
+        <property name="slot5" value="0" />
+        <property name="slot6" value="0" />
+        <property name="slot7" value="0" />
+        <property name="slot8" value="0" />
+        <property name="slot9" value="0" />
+        <property name="slot10" value="0" />
+        <property name="slot11" value="0" />
+        <property name="slot12" value="0" />
+        <property name="slot13" value="0" />
+        <property name="slot14" value="0" />
+        <property name="slot15" value="0" />
+        <property name="slot16" value="0" />
+        <property name="slot17" value="0" />
+        <property name="slot18" value="0" />
+        <property name="slot19" value="0" />
+        <property name="slot20" value="0" />
+        <property name="autosendSlot" value="0" />
+      </properties>
+      <layout>
+        <posX>377</posX>
+        <posY>363</posY>
+      </layout>
+    </component>
+    <component id="TextDisplay.1" type_id="asterics.TextDisplay">
+      <description>GUI component, which displays text.</description>
+      <ports>
+        <inputPort portTypeID="input">
+          <properties />
+        </inputPort>
+      </ports>
+      <properties>
+        <property name="caption" value="Selected action" />
+        <property name="default" value="" />
+        <property name="textPosition" value="1" />
+        <property name="textColor" value="0" />
+        <property name="backgroundColor" value="11" />
+        <property name="displayGUI" value="true" />
+      </properties>
+      <layout>
+        <posX>858</posX>
+        <posY>47</posY>
+      </layout>
+      <gui>
+        <posX>6072</posX>
+        <posY>121</posY>
+        <width>3875</width>
+        <height>778</height>
+      </gui>
+    </component>
+    <component id="InfoBox (TextArea)" type_id="asterics.TextArea">
+      <description>GUI component, which displays text.</description>
+      <ports>
+        <inputPort portTypeID="setText">
+          <properties />
+        </inputPort>
+        <inputPort portTypeID="appendText">
+          <properties />
+        </inputPort>
+        <outputPort portTypeID="text">
+          <properties />
+        </outputPort>
+      </ports>
+      <properties>
+        <property name="caption" value="Info" />
+        <property name="default" value="Please attach the Tobii EyeX eyetracker and install the SDK. For more info go to: http://www.tobii.com/xperience/developer/" />
+        <property name="editable" value="false" />
+        <property name="fontSize" value="14" />
+        <property name="textColor" value="10" />
+        <property name="backgroundColor" value="11" />
+        <property name="displayGUI" value="true" />
+      </properties>
+      <layout>
+        <posX>145</posX>
+        <posY>383</posY>
+      </layout>
+      <gui>
+        <posX>10</posX>
+        <posY>121</posY>
+        <width>6062</width>
+        <height>778</height>
+      </gui>
+    </component>
+  </components>
+  <channels>
+    <channel id="binding.4">
+      <description />
+      <source>
+        <component id="EyeX.1" />
+        <port id="gazeX" />
+      </source>
+      <target>
+        <component id="Averager.1" />
+        <port id="input" />
+      </target>
+    </channel>
+    <channel id="binding.5">
+      <description />
+      <source>
+        <component id="Averager.1" />
+        <port id="output" />
+      </source>
+      <target>
+        <component id="Mouse.1" />
+        <port id="mouseX" />
+      </target>
+    </channel>
+    <channel id="binding.6">
+      <description />
+      <source>
+        <component id="EyeX.1" />
+        <port id="gazeY" />
+      </source>
+      <target>
+        <component id="Averager.1.1" />
+        <port id="input" />
+      </target>
+    </channel>
+    <channel id="binding.7">
+      <description />
+      <source>
+        <component id="Averager.1.1" />
+        <port id="output" />
+      </source>
+      <target>
+        <component id="Mouse.1" />
+        <port id="mouseY" />
+      </target>
+    </channel>
+    <channel id="binding.8">
+      <source>
+        <component id="CellBoard.1" />
+        <port id="selectedCellText" />
+      </source>
+      <target>
+        <component id="TextDisplay.1" />
+        <port id="input" />
+      </target>
+    </channel>
+    <channel id="binding.9">
+      <description />
+      <source>
+        <component id="ConstantDispatcher.1.1" />
+        <port id="output" />
+      </source>
+      <target>
+        <component id="MidiPlayer.1.1" />
+        <port id="pitch" />
+      </target>
+    </channel>
+  </channels>
+  <eventChannels>
+    <eventChannel id="longblink_dispatchSlot1">
+      <description />
+      <sources>
+        <source>
+          <component id="EyeX.1" />
+          <eventPort id="longblink" />
+        </source>
+      </sources>
+      <targets>
+        <target>
+          <component id="ConstantDispatcher.1.1" />
+          <eventPort id="dispatchSlot1" />
+        </target>
+      </targets>
+    </eventChannel>
+  </eventChannels>
+  <modelGUI>
+    <Decoration>false</Decoration>
+    <Fullscreen>false</Fullscreen>
+    <AlwaysOnTop>false</AlwaysOnTop>
+    <ToSystemTray>false</ToSystemTray>
+    <ShopControlPanel>false</ShopControlPanel>
+    <AREGUIWindow>
+      <posX>0</posX>
+      <posY>0</posY>
+      <width>10000</width>
+      <height>10000</height>
+    </AREGUIWindow>
+  </modelGUI>
+</model>

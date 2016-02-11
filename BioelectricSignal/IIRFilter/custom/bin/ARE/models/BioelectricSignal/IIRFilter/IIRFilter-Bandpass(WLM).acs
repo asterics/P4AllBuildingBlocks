@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" modelName="C:\AsTeRICS\bin\ACS\models\componentTests\processors\IIRFilter_test.acs_2015_10_9_10_34" version="20130320">
+<model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" modelName="D:\AsTeRICS\AsTeRICS_Licensing_Packaging_Asterics_2_8_Prep\bin\ARE\models\merged\bin\ARE\models\BioelectricSignal\IIRFilter\IIRFilter-Bandpass(WLM).acs_2016_2_11_13_14" version="20130320">
   <components>
     <component id="IIRFilter.1" type_id="asterics.IIRFilter">
       <description>This plugin provides various filter implementations</description>
@@ -44,8 +44,8 @@
         <property name="offset" value="0" />
       </properties>
       <layout>
-        <posX>22</posX>
-        <posY>49</posY>
+        <posX>41</posX>
+        <posY>140</posY>
       </layout>
     </component>
     <component id="Oscilloscope.1" type_id="asterics.Oscilloscope">
@@ -74,8 +74,8 @@
         <posY>41</posY>
       </layout>
       <gui>
-        <posX>715</posX>
-        <posY>1755</posY>
+        <posX>822</posX>
+        <posY>2787</posY>
         <width>3812</width>
         <height>1667</height>
       </gui>
@@ -106,8 +106,8 @@
         <posY>129</posY>
       </layout>
       <gui>
-        <posX>715</posX>
-        <posY>3422</posY>
+        <posX>822</posX>
+        <posY>4454</posY>
         <width>3812</width>
         <height>1667</height>
       </gui>
@@ -138,10 +138,43 @@
         <posY>295</posY>
       </layout>
       <gui>
-        <posX>4528</posX>
-        <posY>1755</posY>
+        <posX>4697</posX>
+        <posY>2787</posY>
         <width>2500</width>
         <height>3333</height>
+      </gui>
+    </component>
+    <component id="InfoBox (TextArea)" type_id="asterics.TextArea">
+      <description>GUI component, which displays text.</description>
+      <ports>
+        <inputPort portTypeID="setText">
+          <properties />
+        </inputPort>
+        <inputPort portTypeID="appendText">
+          <properties />
+        </inputPort>
+        <outputPort portTypeID="text">
+          <properties />
+        </outputPort>
+      </ports>
+      <properties>
+        <property name="caption" value="Info" />
+        <property name="default" value="Signal characteristics: Sine, 20Hz, Amplitudes: +-100, IIRFilter characteristics: bandpass, butterworth, order=10, fc1=10Hz, fc2=20Hz" />
+        <property name="editable" value="false" />
+        <property name="fontSize" value="14" />
+        <property name="textColor" value="10" />
+        <property name="backgroundColor" value="11" />
+        <property name="displayGUI" value="true" />
+      </properties>
+      <layout>
+        <posX>73</posX>
+        <posY>333</posY>
+      </layout>
+      <gui>
+        <posX>822</posX>
+        <posY>2121</posY>
+        <width>6375</width>
+        <height>556</height>
       </gui>
     </component>
   </components>
@@ -196,8 +229,8 @@
     <AREGUIWindow>
       <posX>785</posX>
       <posY>1422</posY>
-      <width>6750</width>
-      <height>3889</height>
+      <width>6875</width>
+      <height>4889</height>
     </AREGUIWindow>
   </modelGUI>
 </model>
