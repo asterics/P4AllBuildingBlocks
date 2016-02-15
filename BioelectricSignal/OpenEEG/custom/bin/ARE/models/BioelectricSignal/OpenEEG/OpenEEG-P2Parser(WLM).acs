@@ -1,5 +1,10 @@
 <?xml version="1.0"?>
-<model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" modelName="D:\AsTeRICS\AsTeRICS_Licensing_Packaging_Asterics_2_8_Prep\bin\ARE\models\merged\bin\ARE\models\BioelectricSignal\OpenEEG\OpenEEG-P2Parser(WLM).acs_2016_2_11_13_35" version="20130320">
+<model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" modelName="D:\P4All\P4AllBuildingBlocks\BioelectricSignal\OpenEEG\custom\bin\ARE\models\BioelectricSignal\OpenEEG\OpenEEG-P2Parser(WLM).acs_2016_2_15_12_53" version="20130320">
+  <modelDescription>
+    <shortDescription />
+    <requirements />
+    <description />
+  </modelDescription>
   <components>
     <component id="Oscilloscope.1.1" type_id="asterics.Oscilloscope">
       <description>Oscilloscope display for one signal channel</description>
@@ -88,8 +93,8 @@
         </outputPort>
       </ports>
       <properties>
-        <property name="ComPort" value="COM12" />
-        <property name="BaudRate" value="57600" />
+        <property name="ComPort" value="COM43" />
+        <property name="BaudRate" value="115200" />
       </properties>
       <layout>
         <posX>81</posX>
@@ -132,6 +137,7 @@
   </components>
   <channels>
     <channel id="binding.0">
+      <description />
       <source>
         <component id="p2_parser.1" />
         <port id="Channel1" />
@@ -142,6 +148,7 @@
       </target>
     </channel>
     <channel id="binding.1">
+      <description />
       <source>
         <component id="p2_parser.1" />
         <port id="Channel2" />

@@ -1,21 +1,9 @@
 <?xml version="1.0"?>
-<model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" modelName="D:\AsTeRICS\AsTeRICS_Licensing_Packaging_Asterics_2_8_Prep\bin\ARE\models\merged\bin\ARE\models\SmartHomeIntegration\SmartHome-Integrated(W).acs_2016_2_11_17_5" version="20130320">
+<model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" modelName="D:\P4All\P4AllBuildingBlocks\SmartHomeIntegration\custom\bin\ARE\models\SmartHomeIntegration\SmartHome-Integrated(W).acs_2016_2_15_13_5" version="20130320">
   <modelDescription>
-    <shortDescription>Comprehensive Home Control solution involving IR control and KNX,
-controlled via head-mouse or touchscreen input .
-</shortDescription>
-    <requirements>The IRTrans universal IR remote control module (USB-, Lan-, or WiFi version) 
-has to be connected to the system, the driver has to be installed.
-A KNX infrastructure has to be connected via KNXnet/IP router.
-A webcam has to be connected, alternatively a touchscreen can be used.
-</requirements>
-    <description>This model allows to control different functions of a smart home (lights via KNX, music player and TV  via IR remote control)
-The functions are selected via head-controlled mouse or via touchscreen input.
-
-The user interface is established via OSKA, where the main menu for function selection 
-is the "aat_homcontrol.xml" grid. Please see these grids for the utilized IR commands 
-and KNX group addresses.
-</description>
+    <shortDescription />
+    <requirements />
+    <description />
   </modelDescription>
   <components>
     <component id="MathEvaluator.1" type_id="asterics.MathEvaluator">
@@ -1029,7 +1017,6 @@ and KNX group addresses.
   </components>
   <channels>
     <channel id="binding.31">
-      <description />
       <source>
         <component id="CellBoard.1" />
         <port id="selectedCellText" />
@@ -1040,7 +1027,6 @@ and KNX group addresses.
       </target>
     </channel>
     <channel id="binding.26">
-      <description />
       <source>
         <component id="Averager.1" />
         <port id="output" />
@@ -1051,7 +1037,6 @@ and KNX group addresses.
       </target>
     </channel>
     <channel id="binding.27">
-      <description />
       <source>
         <component id="Averager.1.1" />
         <port id="output" />
@@ -1062,7 +1047,6 @@ and KNX group addresses.
       </target>
     </channel>
     <channel id="binding.24">
-      <description />
       <source>
         <component id="Averager.1" />
         <port id="output" />
@@ -1073,7 +1057,6 @@ and KNX group addresses.
       </target>
     </channel>
     <channel id="binding.20">
-      <description />
       <source>
         <component id="StringDispatcher.1" />
         <port id="output" />
@@ -1084,7 +1067,6 @@ and KNX group addresses.
       </target>
     </channel>
     <channel id="binding.17">
-      <description />
       <source>
         <component id="Averager.1.1" />
         <port id="output" />
@@ -1095,7 +1077,6 @@ and KNX group addresses.
       </target>
     </channel>
     <channel id="binding.19">
-      <description />
       <source>
         <component id="MathEvaluator.1.1" />
         <port id="out" />
@@ -1106,7 +1087,6 @@ and KNX group addresses.
       </target>
     </channel>
     <channel id="binding.21">
-      <description />
       <source>
         <component id="CellBoard.1" />
         <port id="selectedCellText" />
@@ -1117,7 +1097,6 @@ and KNX group addresses.
       </target>
     </channel>
     <channel id="binding.18">
-      <description />
       <source>
         <component id="Slider.1" />
         <port id="value" />
@@ -1128,7 +1107,6 @@ and KNX group addresses.
       </target>
     </channel>
     <channel id="binding.16">
-      <description />
       <source>
         <component id="MathEvaluator.1" />
         <port id="out" />
@@ -1139,7 +1117,6 @@ and KNX group addresses.
       </target>
     </channel>
     <channel id="binding.25">
-      <description />
       <source>
         <component id="FacetrackerLK.1" />
         <port id="noseY" />
@@ -1150,7 +1127,6 @@ and KNX group addresses.
       </target>
     </channel>
     <channel id="binding.9">
-      <description />
       <source>
         <component id="Timer.1" />
         <port id="time" />
@@ -1161,7 +1137,6 @@ and KNX group addresses.
       </target>
     </channel>
     <channel id="binding.22">
-      <description />
       <source>
         <component id="MultiSourceString.1" />
         <port id="output" />
@@ -1172,7 +1147,6 @@ and KNX group addresses.
       </target>
     </channel>
     <channel id="binding.23">
-      <description />
       <source>
         <component id="FacetrackerLK.1" />
         <port id="noseX" />
@@ -1183,7 +1157,6 @@ and KNX group addresses.
       </target>
     </channel>
     <channel id="binding.15">
-      <description />
       <source>
         <component id="Slider.1" />
         <port id="value" />
@@ -1194,7 +1167,6 @@ and KNX group addresses.
       </target>
     </channel>
     <channel id="binding.28">
-      <description />
       <source>
         <component id="CellBoard.1" />
         <port id="selectedCellText" />
@@ -1205,7 +1177,6 @@ and KNX group addresses.
       </target>
     </channel>
     <channel id="binding.30">
-      <description />
       <source>
         <component id="CellBoard.1" />
         <port id="selectedCellText" />
@@ -1216,7 +1187,6 @@ and KNX group addresses.
       </target>
     </channel>
     <channel id="binding.33">
-      <description />
       <source>
         <component id="CellBoard.1" />
         <port id="selectedCellText" />
@@ -1227,7 +1197,6 @@ and KNX group addresses.
       </target>
     </channel>
     <channel id="binding.34">
-      <description />
       <source>
         <component id="StringDispatcher.2" />
         <port id="output" />
@@ -1238,6 +1207,7 @@ and KNX group addresses.
       </target>
     </channel>
     <channel id="binding.32">
+      <description />
       <source>
         <component id="CellBoard.1" />
         <port id="selectedCellText" />
@@ -1250,7 +1220,6 @@ and KNX group addresses.
   </channels>
   <eventChannels>
     <eventChannel id="button1_dispatchSlot1">
-      <description />
       <sources>
         <source>
           <component id="ButtonGrid.1" />
@@ -1265,7 +1234,6 @@ and KNX group addresses.
       </targets>
     </eventChannel>
     <eventChannel id="exitZone_stop">
-      <description />
       <sources>
         <source>
           <component id="Deadzone.1" />
@@ -1280,7 +1248,6 @@ and KNX group addresses.
       </targets>
     </eventChannel>
     <eventChannel id="enterZone_start">
-      <description />
       <sources>
         <source>
           <component id="Deadzone.1" />
@@ -1295,7 +1262,6 @@ and KNX group addresses.
       </targets>
     </eventChannel>
     <eventChannel id="button2_dispatchSlot2">
-      <description />
       <sources>
         <source>
           <component id="ButtonGrid.1" />
@@ -1310,7 +1276,6 @@ and KNX group addresses.
       </targets>
     </eventChannel>
     <eventChannel id="button3_dispatchSlot3">
-      <description />
       <sources>
         <source>
           <component id="ButtonGrid.1" />
@@ -1325,7 +1290,6 @@ and KNX group addresses.
       </targets>
     </eventChannel>
     <eventChannel id="exitZone_reset">
-      <description />
       <sources>
         <source>
           <component id="Deadzone.1" />
@@ -1355,6 +1319,7 @@ and KNX group addresses.
       </targets>
     </eventChannel>
     <eventChannel id="recognizedCommand1_dispatchSlot1">
+      <description />
       <sources>
         <source>
           <component id="EventDispatcher.1" />
@@ -1369,6 +1334,7 @@ and KNX group addresses.
       </targets>
     </eventChannel>
     <eventChannel id="periodFinished_scanMove">
+      <description />
       <sources>
         <source>
           <component id="Timer.2" />
@@ -1383,6 +1349,7 @@ and KNX group addresses.
       </targets>
     </eventChannel>
     <eventChannel id="recognizedCommand1_input">
+      <description />
       <sources>
         <source>
           <component id="EventDispatcher.1" />
@@ -1397,6 +1364,7 @@ and KNX group addresses.
       </targets>
     </eventChannel>
     <eventChannel id="output_stop">
+      <description />
       <sources>
         <source>
           <component id="EventDelay.1" />
@@ -1411,6 +1379,7 @@ and KNX group addresses.
       </targets>
     </eventChannel>
     <eventChannel id="recognizedCommand2_stop">
+      <description />
       <sources>
         <source>
           <component id="EventDispatcher.1" />
@@ -1425,7 +1394,6 @@ and KNX group addresses.
       </targets>
     </eventChannel>
     <eventChannel id="periodFinished_leftClick">
-      <description />
       <sources>
         <source>
           <component id="Timer.1" />
@@ -1440,7 +1408,6 @@ and KNX group addresses.
       </targets>
     </eventChannel>
     <eventChannel id="recognizedCommand1_event-in">
-      <description />
       <sources>
         <source>
           <component id="EventDispatcher.1" />
@@ -1455,7 +1422,6 @@ and KNX group addresses.
       </targets>
     </eventChannel>
     <eventChannel id="event-out1_launchNow">
-      <description />
       <sources>
         <source>
           <component id="EventFlipFlop.1" />
@@ -1470,7 +1436,6 @@ and KNX group addresses.
       </targets>
     </eventChannel>
     <eventChannel id="event-out2_closeNow">
-      <description />
       <sources>
         <source>
           <component id="EventFlipFlop.1" />
@@ -1485,7 +1450,6 @@ and KNX group addresses.
       </targets>
     </eventChannel>
     <eventChannel id="event-out1_launchNow">
-      <description />
       <sources>
         <source>
           <component id="EventFlipFlop.1" />
@@ -1500,7 +1464,6 @@ and KNX group addresses.
       </targets>
     </eventChannel>
     <eventChannel id="event-out2_closeNow">
-      <description />
       <sources>
         <source>
           <component id="EventFlipFlop.1" />
@@ -1515,7 +1478,6 @@ and KNX group addresses.
       </targets>
     </eventChannel>
     <eventChannel id="keyPressed_start">
-      <description />
       <sources>
         <source>
           <component id="KeyCapture.1" />
@@ -1530,7 +1492,6 @@ and KNX group addresses.
       </targets>
     </eventChannel>
     <eventChannel id="keyPressed_scanSelect">
-      <description />
       <sources>
         <source>
           <component id="KeyCapture.1" />
