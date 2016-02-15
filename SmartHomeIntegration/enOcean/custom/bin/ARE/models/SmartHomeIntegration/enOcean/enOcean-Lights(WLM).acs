@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" modelName="D:\AsTeRICS\AsTeRICS_Licensing_Packaging_Asterics_2_8_Prep\bin\ARE\models\merged\bin\ARE\models\SmartHomeIntegration\enOcean\enOcean-Lights(WLM).acs_2016_2_11_16_59" version="20130320">
+<model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" modelName="D:\P4All\P4AllBuildingBlocks\SmartHomeIntegration\enOcean\custom\bin\ARE\models\SmartHomeIntegration\enOcean\enOcean-Lights(WLM).acs_2016_2_15_21_44" version="20130320">
   <modelDescription>
     <shortDescription>KNX Demo application
 This model controls the lightning of the KNX Gamma Trainingskit.</shortDescription>
@@ -82,71 +82,6 @@ individually with other string formatting plugins.
         <width>2625</width>
         <height>4889</height>
       </gui>
-    </component>
-    <component id="Knx.1" type_id="asterics.Knx">
-      <description>My Plugin description</description>
-      <ports>
-        <inputPort portTypeID="command">
-          <properties />
-        </inputPort>
-        <inputPort portTypeID="slider1">
-          <properties />
-        </inputPort>
-        <inputPort portTypeID="slider2">
-          <properties />
-        </inputPort>
-        <inputPort portTypeID="slider3">
-          <properties />
-        </inputPort>
-        <inputPort portTypeID="slider4">
-          <properties />
-        </inputPort>
-        <inputPort portTypeID="slider5">
-          <properties />
-        </inputPort>
-        <inputPort portTypeID="slider6">
-          <properties />
-        </inputPort>
-      </ports>
-      <properties>
-        <property name="localIP" value="172.22.0.213" />
-        <property name="KNXNetIP" value="172.22.0.20" />
-        <property name="NAT" value="true" />
-        <property name="groupAddress1" value="1/1/0" />
-        <property name="dataType1" value="boolean" />
-        <property name="dataValue1" value="1" />
-        <property name="groupAddress2" value="1/1/0" />
-        <property name="dataType2" value="boolean" />
-        <property name="dataValue2" value="0" />
-        <property name="groupAddress3" value="1/1/4" />
-        <property name="dataType3" value="boolean" />
-        <property name="dataValue3" value="1" />
-        <property name="groupAddress4" value="1/1/4" />
-        <property name="dataType4" value="boolean" />
-        <property name="dataValue4" value="0" />
-        <property name="groupAddress5" value="1/1/5" />
-        <property name="dataType5" value="boolean" />
-        <property name="dataValue5" value="1" />
-        <property name="groupAddress6" value="1/1/5" />
-        <property name="dataType6" value="boolean" />
-        <property name="dataValue6" value="0" />
-        <property name="groupAddressSlider1" value="1/1/100" />
-        <property name="groupAddressSlider2" value="1/1/101" />
-        <property name="groupAddressSlider3" value="1/1/102" />
-        <property name="groupAddressSlider4" value="1/1/103" />
-        <property name="groupAddressSlider5" value="1/1/104" />
-        <property name="groupAddressSlider6" value="1/1/105" />
-        <property name="groupAddressTrigger1" value="1/1/94" />
-        <property name="groupAddressTrigger2" value="1/1/95" />
-        <property name="groupAddressTrigger3" value="1/1/1" />
-        <property name="groupAddressTrigger4" value="1/1/1" />
-        <property name="groupAddressTrigger5" value="1/1/1" />
-        <property name="groupAddressTrigger6" value="1/1/1" />
-      </properties>
-      <layout>
-        <posX>418</posX>
-        <posY>106</posY>
-      </layout>
     </component>
     <component id="enocean.1" type_id="asterics.enocean">
       <description>Enables the ARE to communicate with an EnOcean wireless network</description>
@@ -239,8 +174,8 @@ individually with other string formatting plugins.
         <property name="TypeTrigger6" value="binary" />
       </properties>
       <layout>
-        <posX>687</posX>
-        <posY>128</posY>
+        <posX>438</posX>
+        <posY>104</posY>
       </layout>
     </component>
     <component id="StringDispatcher.1" type_id="asterics.StringDispatcher">
@@ -361,90 +296,6 @@ individually with other string formatting plugins.
     </channel>
   </channels>
   <eventChannels>
-    <eventChannel id="button1_send1">
-      <sources>
-        <source>
-          <component id="ButtonGrid.2" />
-          <eventPort id="button1" />
-        </source>
-      </sources>
-      <targets>
-        <target>
-          <component id="Knx.1" />
-          <eventPort id="send1" />
-        </target>
-      </targets>
-    </eventChannel>
-    <eventChannel id="button2_send2">
-      <sources>
-        <source>
-          <component id="ButtonGrid.2" />
-          <eventPort id="button2" />
-        </source>
-      </sources>
-      <targets>
-        <target>
-          <component id="Knx.1" />
-          <eventPort id="send2" />
-        </target>
-      </targets>
-    </eventChannel>
-    <eventChannel id="button3_send3">
-      <sources>
-        <source>
-          <component id="ButtonGrid.2" />
-          <eventPort id="button3" />
-        </source>
-      </sources>
-      <targets>
-        <target>
-          <component id="Knx.1" />
-          <eventPort id="send3" />
-        </target>
-      </targets>
-    </eventChannel>
-    <eventChannel id="button4_send4">
-      <sources>
-        <source>
-          <component id="ButtonGrid.2" />
-          <eventPort id="button4" />
-        </source>
-      </sources>
-      <targets>
-        <target>
-          <component id="Knx.1" />
-          <eventPort id="send4" />
-        </target>
-      </targets>
-    </eventChannel>
-    <eventChannel id="button5_send5">
-      <sources>
-        <source>
-          <component id="ButtonGrid.2" />
-          <eventPort id="button5" />
-        </source>
-      </sources>
-      <targets>
-        <target>
-          <component id="Knx.1" />
-          <eventPort id="send5" />
-        </target>
-      </targets>
-    </eventChannel>
-    <eventChannel id="button6_send6">
-      <sources>
-        <source>
-          <component id="ButtonGrid.2" />
-          <eventPort id="button6" />
-        </source>
-      </sources>
-      <targets>
-        <target>
-          <component id="Knx.1" />
-          <eventPort id="send6" />
-        </target>
-      </targets>
-    </eventChannel>
     <eventChannel id="button1_dispatchSlot1">
       <description />
       <sources>

@@ -20,6 +20,9 @@
 			
 	<target name="deploy" depends="init-fx-tasks, cleanup, setup-staging-area, run-APE, before-deploy, make-installer-only">
 	</target>
+	
+	<target name="run-APE" depends="cleanup, setup-staging-area, asterics.imported.run-APE">
+	</target>
 			
 	<target name="run-APE-single">
         <subant target="run-APE">

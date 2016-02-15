@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" modelName="D:\P4All\P4AllBuildingBlocks\SmartHomeIntegration\custom\bin\ARE\models\SmartHomeIntegration\SmartHome-Integrated(W).acs_2016_2_15_13_5" version="20130320">
+<model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" modelName="D:\P4All\P4AllBuildingBlocks\SmartHomeIntegration\custom\bin\ARE\models\SmartHomeIntegration\SmartHome-Integrated(W).acs_2016_2_15_22_8" version="20130320">
   <modelDescription>
     <shortDescription />
     <requirements />
@@ -90,10 +90,10 @@
         <posY>28</posY>
       </layout>
       <gui>
-        <posX>6587</posX>
-        <posY>2787</posY>
-        <width>938</width>
-        <height>1000</height>
+        <posX>8188</posX>
+        <posY>3000</posY>
+        <width>1000</width>
+        <height>889</height>
       </gui>
     </component>
     <component id="MultiSourceString.1" type_id="asterics.MultiSourceString">
@@ -158,7 +158,7 @@
         <property name="buttonCaption1" value="Double" />
         <property name="buttonCaption2" value="Right" />
         <property name="buttonCaption3" value="Drag" />
-        <property name="buttonCaption4" value="Other Demos" />
+        <property name="buttonCaption4" value="" />
         <property name="buttonCaption5" value="" />
         <property name="buttonCaption6" value="" />
         <property name="buttonCaption7" value="" />
@@ -201,10 +201,10 @@
         <posY>506</posY>
       </layout>
       <gui>
-        <posX>4150</posX>
-        <posY>2787</posY>
-        <width>2438</width>
-        <height>1000</height>
+        <posX>5250</posX>
+        <posY>3000</posY>
+        <width>2875</width>
+        <height>889</height>
       </gui>
     </component>
     <component id="Timer.1" type_id="asterics.Timer">
@@ -444,7 +444,7 @@
         <property name="default" value="80" />
         <property name="gain" value="0.01" />
         <property name="autosend" value="true" />
-        <property name="caption" value="speed" />
+        <property name="caption" value="Mouse speed" />
         <property name="majorTickSpacing" value="20" />
         <property name="minorTickSpacing" value="5" />
         <property name="alignment" value="0" />
@@ -457,9 +457,9 @@
         <posY>349</posY>
       </layout>
       <gui>
-        <posX>4150</posX>
-        <posY>3787</posY>
-        <width>3375</width>
+        <posX>4188</posX>
+        <posY>4000</posY>
+        <width>3312</width>
         <height>1111</height>
       </gui>
     </component>
@@ -536,10 +536,10 @@
         <posY>168</posY>
       </layout>
       <gui>
-        <posX>7822</posX>
-        <posY>121</posY>
-        <width>1562</width>
-        <height>2444</height>
+        <posX>9322</posX>
+        <posY>3232</posY>
+        <width>625</width>
+        <height>1111</height>
       </gui>
     </component>
     <component id="FS20Sender.1" type_id="asterics.FS20Sender">
@@ -622,10 +622,10 @@
         <posY>329</posY>
       </layout>
       <gui>
-        <posX>650</posX>
-        <posY>2787</posY>
+        <posX>625</posX>
+        <posY>4000</posY>
         <width>3500</width>
-        <height>2111</height>
+        <height>1111</height>
       </gui>
     </component>
     <component id="CellBoard.1" type_id="asterics.CellBoard">
@@ -800,10 +800,10 @@
         <posY>519</posY>
       </layout>
       <gui>
-        <posX>650</posX>
-        <posY>5009</posY>
-        <width>8688</width>
-        <height>4333</height>
+        <posX>625</posX>
+        <posY>5222</posY>
+        <width>8562</width>
+        <height>4111</height>
       </gui>
     </component>
     <component id="EventDispatcher.1" type_id="asterics.EventDispatcher">
@@ -876,8 +876,8 @@
         </inputPort>
       </ports>
       <properties>
-        <property name="caption" value="Temperature" />
-        <property name="default" value="--.-" />
+        <property name="caption" value="Room temperature" />
+        <property name="default" value="23.5°C" />
         <property name="textPosition" value="1" />
         <property name="textColor" value="0" />
         <property name="backgroundColor" value="11" />
@@ -888,10 +888,10 @@
         <posY>844</posY>
       </layout>
       <gui>
-        <posX>7525</posX>
-        <posY>2787</posY>
-        <width>1812</width>
-        <height>778</height>
+        <posX>7562</posX>
+        <posY>4000</posY>
+        <width>1625</width>
+        <height>1111</height>
       </gui>
     </component>
     <component id="Timer.2" type_id="asterics.Timer">
@@ -1008,10 +1008,10 @@
         <posY>732</posY>
       </layout>
       <gui>
-        <posX>697</posX>
-        <posY>1121</posY>
-        <width>7062</width>
-        <height>1556</height>
+        <posX>625</posX>
+        <posY>3000</posY>
+        <width>4562</width>
+        <height>889</height>
       </gui>
     </component>
   </components>
@@ -1513,10 +1513,10 @@
     <ToSystemTray>false</ToSystemTray>
     <ShopControlPanel>false</ShopControlPanel>
     <AREGUIWindow>
-      <posX>685</posX>
-      <posY>2711</posY>
+      <posX>610</posX>
+      <posY>2889</posY>
       <width>8688</width>
-      <height>6667</height>
+      <height>6556</height>
     </AREGUIWindow>
   </modelGUI>
 </model>

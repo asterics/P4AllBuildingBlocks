@@ -123,7 +123,9 @@
 
 	<target name="copy-custom-files">
 		<copy todir="${P4All.mergedCustomDir}" overwrite="yes" verbose="true">
-			<fileset dir="custom" excludes="bin/ARE/profile/" />
+			<fileset dir="custom" excludes="bin/ARE/profile/">
+					<exclude name="bin/ARE/models/*.acs"/>
+			</fileset>
 		</copy>
 	</target>
 
