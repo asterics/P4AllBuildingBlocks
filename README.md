@@ -8,7 +8,6 @@ The current version of the repository includes configurations files for followin
 * Digital Signal Processing: IIRFilter
 * Computer Vision (Camera Input): FaceTrackerLK
 * Computer Vision (Camera Input): XFaceTrackerLK
-* Computer Vision (Camera Input): FaceTrackerCLM
 * Computer Vision (Eye Tacking): TobiiEyeX
 * Microcontroller (Input Transducer): Arduino
 * Microcontroller (HID emulation): Universal HID Actuator
@@ -24,8 +23,6 @@ A short overview of the features of these building block can be found in the [P4
 
 ## Demos
 Go to the AsTeRICS [demo page](http://asterics.github.io/AsTeRICS/demos.html) to see the building blocks in action.
-The [demo release](https://github.com/asterics/P4AllBuildingBlocks/releases/tag/Cammouse-P4alldemo-v1.0) of the AsTeRICS system includes runnable versions of all these Building blocks and demo applications of their combination, including:
-* Webcam-based Facetracking
-* Data exchange with WebBrowser via Websocket
+The [demo release](https://github.com/asterics/P4AllBuildingBlocks/releases/tag/asterics-prosperity4all-bb-demos) of the AsTeRICS system includes runnable versions of all these Building blocks and demo applications of their combination.
 
 
