@@ -2,6 +2,10 @@
 	<property name="APE.propertiesFile" value="APE.properties"></property>
 	<property name="APE.optionalServicesFile" value="" />
 	
+	<!-- Please modify the ARE.baseURI path to your ARE installation -->
+	<property name="ARE.baseURI" value="D:\AsTeRICS\AsTeRICS_Licensing_Packaging_Asterics_2_8_Prep\bin\ARE\"> </property>
+
+	
 	<loadproperties srcFile="${APE.propertiesFile}" />
 	
 	<condition property="APE.buildDir" value="build/">		
@@ -121,7 +125,7 @@
 			
 	</target>
 
-	<target name="copy-custom-files">
+	<target name="copy-custom-files-for-bundle">
 		<copy todir="${P4All.mergedCustomDir}" overwrite="yes" verbose="true">
 			<fileset dir="custom" excludes="bin/ARE/profile/">
 					<exclude name="bin/ARE/models/*.acs"/>
