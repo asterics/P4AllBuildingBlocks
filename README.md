@@ -24,12 +24,13 @@ The behaviour of APE-copy and the native installer creation can be configured in
 1. Clone the AsTeRICS repository to a parallel folder of this one.  
   ```
   cd ..
+  
   git clone -b Licensing_Packaging_Asterics_2_8_Prep https://github.com/asterics/AsTeRICS.git
   ```
 2. Install the [**Java Development Kit 8 (32-bit)**] (http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
-  * Ensure to set “JAVA_HOME” to the folder where you installed the Java JDK and add the JDK bin path to the Environment Variable “Path”
+  * Ensure to set â€œJAVA_HOMEâ€ to the folder where you installed the Java JDK and add the JDK bin path to the Environment Variable â€œPathâ€
 3. Install the [**apache ant build framework (version >= 1.9.1)**] (http://ant.apache.org/bindownload.cgi)
-  * Ensure to set “ANT_HOME” to the folder where you installed ant and add the ant bin path to the Environment Variable “Path”
+  * Ensure to set â€œANT_HOMEâ€ to the folder where you installed ant and add the ant bin path to the Environment Variable â€œPathâ€
 4. Open a terminal and go to the ```ARE``` subfolder
 5. Compile the ARE by calling
   ```
@@ -42,8 +43,10 @@ It must point to the ```bin/ARE``` folder of the installed AsTeRICS framework.
 ### Creating bundled demo with APE-copy
 
 1. Open a terminal window in the root folder of the P4AllBuildingBlocks repository and call
+
 ```ant APE-copy```
 2. To test the result, go to the ```build\merged\bin\ARE``` subfolder and start the ARE.
+
 ```
 cd build\merged\bin\ARE
 start.bat
@@ -53,8 +56,10 @@ start.bat
 Please ensure to install [InnoSetup >= 5] (http://www.jrsoftware.org/isdl.php) to be able to create .exe installer files.
 
 1. Open a terminal window in the root folder of the P4AllBuildingBlocks repository and call
+
 ```ant deploy```
 2. To test the result, go to the ```build\deploy\bundles``` subfolder and execute the demo installer
+
 ```
 cd build\deploy\bundles
 asterics-prosperity4all-bb-demos-0.1.exe
