@@ -21,24 +21,23 @@ The behaviour of APE-copy and the native installer creation can be configured in
 
 ### Install and build instructions of prerequisites 
 
-1. Clone the AsTeRICS repository to a parallel folder of this one.  
-  ```
+* Clone the AsTeRICS repository to a parallel folder of this one.  
+```
 cd ..
-
 git clone -b Licensing_Packaging_Asterics_2_8_Prep https://github.com/asterics/AsTeRICS.git
-  ```
-2. Install the [**Java Development Kit 8 (32-bit)**] (http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
+```
+* Install the [**Java Development Kit 8 (32-bit)**] (http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
   * Ensure to set “JAVA_HOME” to the folder where you installed the Java JDK and add the JDK bin path to the Environment Variable “Path”
-3. Install the [**apache ant build framework (version >= 1.9.1)**] (http://ant.apache.org/bindownload.cgi)
+* Install the [**apache ant build framework (version >= 1.9.1)**] (http://ant.apache.org/bindownload.cgi)
   * Ensure to set “ANT_HOME” to the folder where you installed ant and add the ant bin path to the Environment Variable “Path”
-4. Open a terminal and go to the ```ARE``` subfolder
-5. Compile the ARE by calling
+* Open a terminal and go to the ```ARE``` subfolder
+* Compile the ARE by calling
   ```
   ant
   ```
-6. Edit/Check the ```<ARE.baseURI>``` property value in the file [P4AllBuildingBlocks/imported.xml](https://github.com/asterics/P4AllBuildingBlocks/blob/master/imported.xml). 
+* Edit/Check the ```<ARE.baseURI>``` property value in the file [P4AllBuildingBlocks/imported.xml](https://github.com/asterics/P4AllBuildingBlocks/blob/master/imported.xml). 
 It must point to the ```bin/ARE``` folder of the installed AsTeRICS framework.   
-7. __Only for Step 2__: Install installer-specific toolkits like [InnoSetup >= 5] (http://www.jrsoftware.org/isdl.php)(for .exe installer), [WiX toolset >= 3.0](http://wixtoolset.org/) or [debian packaging tools] (https://wiki.debian.org/PackageManagement) depending on the required target platform. For more details, read the [JavaFX packaging tutorial] (https://docs.oracle.com/javase/8/docs/technotes/guides/deploy/self-contained-packaging.html#A1324980) 
+* __Only for Step 2__: Install installer-specific toolkits like [InnoSetup >= 5] (http://www.jrsoftware.org/isdl.php)(for .exe installer), [WiX toolset >= 3.0](http://wixtoolset.org/) or [debian packaging tools] (https://wiki.debian.org/PackageManagement) depending on the required target platform. For more details, read the [JavaFX packaging tutorial] (https://docs.oracle.com/javase/8/docs/technotes/guides/deploy/self-contained-packaging.html#A1324980) 
 
 ### Creating bundled demo with APE-copy
 
