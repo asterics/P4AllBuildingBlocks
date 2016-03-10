@@ -8,6 +8,9 @@ A short overview of the features of the building blocks can be found in the [P4A
 Go to the AsTeRICS [demo page](http://asterics.github.io/AsTeRICS/demos.html) to see the building blocks in action.
 The [demo release](https://github.com/asterics/P4AllBuildingBlocks/releases/tag/asterics-prosperity4all-bb-demos) of the AsTeRICS system includes runnable versions of all these Building blocks and demo applications of their combination.
 
+## Licenses
+The building blocks are dual licensed. You can choose between MIT or GPLv3 license depending on the selected set of plugins, services and libraries you want to use. Please read the [license section in the wiki](https://github.com/asterics/P4AllBuildingBlocks/wiki#license) for more information.
+
 ## Building the project
 This repository is organized in thematic subfolders ('sub-repositories') like ```CameraInput``` containing building blocks using a camera (e.g. for facetracking or eyetracking) or demonstrate use cases for a Smart Home environment.
 
