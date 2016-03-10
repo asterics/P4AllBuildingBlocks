@@ -11,11 +11,11 @@ The [demo release](https://github.com/asterics/P4AllBuildingBlocks/releases/tag/
 ## Building the project
 This repository is organized in thematic subfolders ('sub-repositories') like ```CameraInput``` containing building blocks using a camera (e.g. for facetracking or eyetracking) or demonstrate use cases for a Smart Home environment.
 
-The building blocks can be built in two steps and used in two ways depending on your requirements:
+The building blocks can be used in two ways depending on your requirements:
 
-* Step 1: Create a downstripped/extracted version of AsTeRICS depending on the given model files using [APE-copy](https://github.com/asterics/AsTeRICS/tree/Licensing_Packaging_Asterics_2_8_Prep/bin/APE#ape-copy).You can use the resulting folder and **bundle and deploy it together with your software**.
+* Option 1: Create a downstripped/extracted version of AsTeRICS depending on the given model files using [APE-copy](https://github.com/asterics/AsTeRICS/tree/Licensing_Packaging_Asterics_2_8_Prep/bin/APE#ape-copy).You can use the resulting folder and **bundle and deploy it together with your software**.
 
-* Step 2: Create a native installer and native launcher for your platform of choice - currently Windows (.msi, .exe) and Linux (.deb)
+* Option 2: Create a **native installer** and **native launcher** for your platform of choice - currently Windows (.msi, .exe) and Linux (.deb)
 
 The behaviour of APE-copy and the native installer creation can be configured in the file ```APE.properties```. There you can define model files, copy modes, application name and version and optionally embed a JRE (Java Runtime Environment) into your installer.   
 
@@ -37,7 +37,7 @@ git clone -b Licensing_Packaging_Asterics_2_8_Prep https://github.com/asterics/A
   ```
 * Edit/Check the ```<ARE.baseURI>``` property value in the file [P4AllBuildingBlocks/imported.xml](https://github.com/asterics/P4AllBuildingBlocks/blob/master/imported.xml). 
 It must point to the ```bin/ARE``` folder of the installed AsTeRICS framework.   
-* __Only for Step 2__: Install installer-specific toolkits like [InnoSetup >= 5] (http://www.jrsoftware.org/isdl.php)(for .exe installer), [WiX toolset >= 3.0](http://wixtoolset.org/) or [debian packaging tools] (https://wiki.debian.org/PackageManagement) depending on the required target platform. For more details, read the [JavaFX packaging tutorial] (https://docs.oracle.com/javase/8/docs/technotes/guides/deploy/self-contained-packaging.html#A1324980) 
+* __Only for option 2__: Install installer-specific toolkits like [InnoSetup >= 5] (http://www.jrsoftware.org/isdl.php)(for .exe installer), [WiX toolset >= 3.0](http://wixtoolset.org/) or [debian packaging tools] (https://wiki.debian.org/PackageManagement) depending on the required target platform. For more details, read the [JavaFX packaging tutorial] (https://docs.oracle.com/javase/8/docs/technotes/guides/deploy/self-contained-packaging.html#A1324980) 
 
 ### Creating bundled demo with APE-copy
 
