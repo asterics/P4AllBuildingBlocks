@@ -6,6 +6,6 @@
 	<target name='before-deploy'>
 	</target>
 	
-	<target name="deploy" depends="init-fx-tasks, cleanup, setup-staging-area, run-APE, before-deploy, make-installer-only">
+	<target name="deploy" depends="init-fx-tasks, cleanup, setup-staging-area, APE-copy, before-deploy, make-installer-only">
 	</target>
 </project>
