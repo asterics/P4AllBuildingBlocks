@@ -4,6 +4,10 @@ This repository contains 'sub-repositories' with configuration and build files f
 
 A short overview of the features of the building blocks can be found in the [P4All Developer Space listing](http://portal.teco.edu/dspace/?q=en/)
 
+## Screencast
+Check this screencast explaining and demonstrating the structure and usage of the repository.
+[![Screencast explaining and demonstrating the structure and usage of the repository](images/Screencast-P4AllBBRepo.PNG)](https://drive.google.com/open?id=0B38I5f2hCJ3lMDl0S2NjVzVfTTg) 
+
 ## Demos
 Go to the AsTeRICS [demo page](http://asterics.github.io/AsTeRICS/demos.html) to see the building blocks in action.
 The [demo release](https://github.com/asterics/P4AllBuildingBlocks/releases/tag/asterics-prosperity4all-bb-demos) of the AsTeRICS system includes runnable versions of all these Building blocks and demo applications of their combination.
