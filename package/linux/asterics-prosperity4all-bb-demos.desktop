@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=asterics-prosperity4all-bb-demos
+Comment=AsTeRICS Prosperity4All Building Block Demos
+Exec=/opt/asterics-prosperity4all-bb-demos/app/start.sh --webservice
+Icon=/opt/asterics-prosperity4all-bb-demos/asterics-prosperity4all-bb-demos.png
+Terminal=false
+Type=Application
+Categories=Assistive Technology

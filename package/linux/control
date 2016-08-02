@@ -1,0 +1,9 @@
+Package: asterics-prosperity4all-bb-demos
+Version: 0.2
+Section: unknown
+Maintainer: Asterics consortium - UAS Technikum Wien
+Priority: optional
+Architecture: all
+Provides: asterics-prosperity4all-bb-demos
+Description: AsTeRICS Prosperity4All Building Block Demos - https://github.com/asterics/P4AllBuildingBlocks
+Recommends: oracle-java8-installer, libgstreamer0.10-0, libgstreamer0.10-dev, gstreamer0.10-tools, gstreamer0.10-plugins-base, libgstreamer-plugins-base0.10-dev, gstreamer0.10-plugins-good
