@@ -1,0 +1,13 @@
+#ARE Properties
+#Fri Jul 08 12:28:28 CEST 2016
+ThreadPool.ModelExecutor.size=1
+showErrorDialogs=1
+ARE.hotKey.stopModel=VC_F7
+ARE.gui.font.size=18
+ASAPI.enableACSPortConnection=0
+background_color=-11435361
+ARE.hotKey.pauseModel=VC_F6
+ARE.hotKey.startModel=VC_F5
+ThreadPoolTasks.submitTimeout=20000
+ASAPI.enableAREAutoDetection=0
+ASAPI.ACSPortNumber=9090
