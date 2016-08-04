@@ -20,11 +20,11 @@ This repository is organized in thematic subfolders ('sub-repositories') like ``
 
 The building blocks can be used in two ways depending on your requirements:
 
-* Option 1: Create a downstripped/extracted version of AsTeRICS depending on the given model files using [APE-copy](https://github.com/asterics/AsTeRICS/tree/Licensing_Packaging_Asterics_2_8_Prep/bin/APE#ape-copy).You can use the resulting folder and **bundle and deploy it together with your software**.
+* Option 1: Create a downstripped/extracted version of AsTeRICS depending on the given model files using [APE-copy](https://github.com/asterics/AsTeRICS/tree/master/bin/APE#ape-copy).You can use the resulting folder and **bundle and deploy it together with your software**.
 
-* Option 2: Create a **native installer** and **native launcher** for your platform of choice - currently Windows (.msi, .exe) and Linux (.deb)
+* Option 2: Create a **native installer** and **native launcher** for your platform of choice - currently Windows (.msi, .exe), Linux incl. Raspberry Pi (.deb) and Mac OSX (.dmg)
 
-The behaviour of APE-copy and the native installer creation can be configured in the file ```APE.properties```. There you can define model files, copy modes, application name and version and optionally embed a JRE (Java Runtime Environment) into your installer.   
+The behaviour of APE-copy and the native installer creation can be configured in the file [```APE.properties```](APE.properties). There you can define model files, copy modes, application name and version and optionally embed a JRE (Java Runtime Environment) into your installer.   
 
 ### Install and build instructions of prerequisites 
 
@@ -32,21 +32,12 @@ The behaviour of APE-copy and the native installer creation can be configured in
 ```
 git clone https://github.com/asterics/P4AllBuildingBlocks.git
 ```
-* APE is not finally released yet, but contained in the branch __Licensing_Packaging_Asterics_2_8_Prep__ of the AsTeRICS repository. Clone it to a parallel folder of the P4AllBuildingBlocks repository.  
-```
-git clone -b Licensing_Packaging_Asterics_2_8_Prep https://github.com/asterics/AsTeRICS.git
-```
+* Download and install [AsTeRICS v2.8 full installer](https://github.com/asterics/AsTeRICS/releases/download/v2.8/Setup_AsTeRICS_2_8.exe) or the [platform independent zip-file](https://github.com/asterics/AsTeRICS/releases/download/v2.8/asterics-are-ape-2.8.zip) containing ARE and APE. If using the zip-file extract it to a parallel folder of the P4AllBuildingBlocks repository.
+
 * Install the [**Java Development Kit 8 (32-bit)**] (http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
   * Ensure to set “JAVA_HOME” to the folder where you installed the Java JDK and add the JDK bin path to the Environment Variable “Path”
 * Install the [**apache ant build framework (version >= 1.9.1)**] (http://ant.apache.org/bindownload.cgi)
   * Ensure to set “ANT_HOME” to the folder where you installed ant and add the ant bin path to the Environment Variable “Path”
-* Open a terminal and go to the ```AsTeRICS\ARE``` subfolder
-* Compile the ARE by calling
-  ```
-  ant
-  ```
-* Edit/Check the ```<ARE.baseURI>``` property value in the file [P4AllBuildingBlocks/imported.xml](https://github.com/asterics/P4AllBuildingBlocks/blob/master/imported.xml). 
-It must point to the ```bin/ARE``` folder of the installed AsTeRICS framework.   
 * __Only for option 2__: Install installer-specific toolkits like [InnoSetup >= 5] (http://www.jrsoftware.org/isdl.php) (for .exe installer), [WiX toolset >= 3.0](http://wixtoolset.org/) or [debian packaging tools] (https://wiki.debian.org/PackageManagement) depending on the required target platform. For more details, read the [JavaFX packaging tutorial] (https://docs.oracle.com/javase/8/docs/technotes/guides/deploy/self-contained-packaging.html#A1324980) 
 
 ### Creating bundled demo with APE-copy
