@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=cameramouse-xfacetrackerlk-p4all-bb-demo
+Comment=Crossplatform camera mouse
+Exec=/opt/cameramouse-xfacetrackerlk-p4all-bb-demo/app/start.sh
+Icon=/opt/cameramouse-xfacetrackerlk-p4all-bb-demo/asterics-are.png
+Terminal=false
+Type=Application
+Categories=Assistive Technology

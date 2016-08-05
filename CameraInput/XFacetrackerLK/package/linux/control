@@ -1,0 +1,9 @@
+Package: cameramouse-xfacetrackerlk-p4all-bb-demo
+Version: 2.8
+Section: unknown
+Maintainer: UAS Technikum Wien, Asterics consortium
+Priority: optional
+Architecture: all
+Provides: cameramouse-xfacetrackerlk-p4all-bb-demo
+Description: A crossplatform camera mouse based on AsTeRICS - http://www.asterics.org
+Recommends: oracle-java8-installer, libgstreamer0.10-0, libgstreamer0.10-dev, gstreamer0.10-tools, gstreamer0.10-plugins-base, libgstreamer-plugins-base0.10-dev, gstreamer0.10-plugins-good

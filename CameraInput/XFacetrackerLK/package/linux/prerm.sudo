@@ -35,7 +35,8 @@ case "$1" in
 	   rm -f $APPPATH/profile
 	   rm -f $APPPATH/data
 	   rm -f $APPPATH/areProperties
-
+	   	  
+	   mv $APPINSTALLDIR/$APPNAME.bin $APPINSTALLDIR/$APPNAME
     ;;
 
     failed-upgrade)

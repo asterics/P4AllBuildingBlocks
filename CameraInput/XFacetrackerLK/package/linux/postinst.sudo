@@ -26,16 +26,14 @@ WRITEDIR="/var/opt/$APPNAME/"
 
 case "$1" in
     configure)
-    echo "Executing Postinst in dir $PWD"
+
     echo $DPKG_MAINTSCRIPT_PACKAGE
         echo Adding shortcut to the menu
 
-#In case of the asterics-are installer, we have a customized .desktop file.
-#If java is not embedded the start.sh file is used to start the program
-#		if [ -d "$APPPATH/../runtime" ]; then
+		#if [ -d "$APPPATH/../runtime" ]; then
 			echo "Creating desktop menu entry $APPNAME"
-        		xdg-desktop-menu install --novendor $APPINSTALLDIR/$APPNAME.desktop
-#	        fi
+        	xdg-desktop-menu install --novendor $APPINSTALLDIR/$APPNAME.desktop
+        #fi
 
 
 		echo creating symlinks for models, profile and data folders to tmp folder
@@ -44,23 +42,47 @@ case "$1" in
 		mv $APPPATH/models  $WRITEDIR
 		mv $APPPATH/profile $WRITEDIR 
 		mv $APPPATH/data $WRITEDIR
-		[ -e $APPPATH/areProperties ] && mv $APPPATH/areProperties $WRITEDIR || touch $APPPATH/areProperties
+		mv $APPPATH/areProperties $WRITEDIR
 	
-		chmod -R o+w $WRITEDIR
 		ln -sf $WRITEDIR/models $APPPATH/models
 		ln -sf $WRITEDIR/profile $APPPATH/profile
 		ln -sf $WRITEDIR/data $APPPATH/data
 		ln -sf $WRITEDIR/areProperties $APPPATH/areProperties
 	
+		chmod -R g-w $WRITEDIR
+		chmod -R o-w $WRITEDIR
+		chmod -R u+wx $WRITEDIR
+	
 		chmod +x $APPPATH/start*.sh
+		
+		#embedded start-script to .bin and replace it with a shell script
+		mv $APPINSTALLDIR/$APPNAME $APPINSTALLDIR/$APPNAME.bin
+		
+		cat << 'EOF' >> $APPINSTALLDIR/$APPNAME
+#!/bin/sh
+SCRIPTDIR="$(dirname "$0")"
+APPNAME=$(basename $SCRIPTDIR)
 
-		echo ""
-		echo ""
-		echo "You need a Java Runtime, oracle java 8 is recommended, but openjdk should work as well:"
-		echo sudo apt-get install oracle-java8-installer
-		echo ""
-		echo "For xfacetrackerlk (XCameraMouse) to work, please install libgstreamer0.10:"
-		echo "sudo apt-get install libgstreamer0.10-0 libgstreamer0.10-dev gstreamer0.10-tools gstreamer0.10-plugins-base libgstreamer-plugins-base0.10-dev gstreamer0.10-plugins-good"
+SUDO_CMD=sudo
+if [ -f /usr/bin/gksudo ] ; then
+        SUDO_CMD=/usr/bin/gksudo
+else
+        if [ -f /usr/bin/kdesudo ] ; then
+                SUDO_CMD=/usr/bin/kdesudo
+        fi
+fi
+
+START_CMD="$SCRIPTDIR/app/start.sh $@"
+if [ -d "$SCRIPTDIR/runtime" ]; then
+        START_CMD="$SCRIPTDIR/$APPNAME.bin $@"
+fi
+
+echo Starting $SUDO_CMD $START_CMD
+$SUDO_CMD $START_CMD
+EOF
+
+	    chmod +x $APPINSTALLDIR/$APPNAME
+		
     ;;
 
     abort-upgrade|abort-remove|abort-deconfigure)
