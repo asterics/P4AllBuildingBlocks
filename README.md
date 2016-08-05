@@ -83,7 +83,7 @@ start.bat
 ### Creating single camera mouse demo installer
 
 * To create a native installer for a single building block, go to the respective subfolder - for the crossplatform camera mouse, this is ```CameraInput\XFacetrackerLK``` and call ```ant deploy```.
-* The build process must be run on the target platform of the installer (e.g. Windows for .exe, Debian/Ubuntu for .deb). Also check the [dependencies](#) first.
+* The build process must be run on the target platform of the installer (e.g. Windows for .exe, Debian/Ubuntu for .deb). Also check the [dependencies](https://github.com/asterics/AsTeRICS/blob/master/bin/APE/README.md#dependencies) first.
 ```
 cd CameraInput\XFacetrackerLK
 ant deploy
