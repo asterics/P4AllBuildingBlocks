@@ -6,6 +6,8 @@ A short overview of the features of the building blocks can be found in the [P4A
 
 ## Screencast
 Check this screencast explaining and demonstrating the structure and usage of the repository.
+
+
 [![Screencast explaining and demonstrating the structure and usage of the repository](images/Screencast-P4AllBBRepo.PNG)](https://youtu.be/kpM3E7fp_gQ) 
 
 ## Demos
@@ -20,27 +22,29 @@ This repository is organized in thematic subfolders ('sub-repositories') like ``
 
 The building blocks can be used in two ways depending on your requirements:
 
-* Option 1: Create a downstripped/extracted version of AsTeRICS depending on the given model files using [APE-copy](https://github.com/asterics/AsTeRICS/tree/master/bin/APE#ape-copy).You can use the resulting folder and **bundle and deploy it together with your software**.
+* Option 1: Create a downstripped/extracted version of AsTeRICS depending on the given model files using [APE-copy](https://github.com/asterics/AsTeRICS/tree/master/bin/APE#ape-copy). APE-copy is available as a commandline tool  (```APE-copy.sh|APE-copy.bat```) and as a build target (```ant APE-copy```) of the provided ant build infrastructure. You can use the resulting folder and **bundle and deploy it together with your software**.
 
-* Option 2: Create a **native installer** and **native launcher** for your platform of choice - currently Windows (.msi, .exe), Linux incl. Raspberry Pi (.deb) and Mac OSX (.dmg)
+* Option 2: Create a **native installer** and **native launcher** for your platform of choice. Currently Windows (.msi, .exe), Linux incl. Raspberry Pi (.deb) and Mac OSX (.dmg) are supported. This option is only available as an ant build target (```ant deploy```).
 
 The behaviour of APE-copy and the native installer creation can be configured in the file [```APE.properties```](APE.properties). There you can define model files, copy modes, application name and version and optionally embed a JRE (Java Runtime Environment) into your installer.   
 
 ### Install and build instructions of prerequisites 
 
+The commandline tool APE-copy only needs a Java Runtime Environment. In order to use the ant build targets and create native installers you also need **ant** and a **Java Development Kit 8**.
+
 * Clone the P4AllBuildingBlocks repository
 ```
 git clone https://github.com/asterics/P4AllBuildingBlocks.git
 ```
-* Download and install [AsTeRICS v2.8 full installer](https://github.com/asterics/AsTeRICS/releases/download/v2.8/Setup_AsTeRICS_2_8.exe) or the [platform independent zip-file](https://github.com/asterics/AsTeRICS/releases/download/v2.8/asterics-are-ape-2.8.zip) containing ARE and APE. If using the zip-file extract it to a parallel folder of the P4AllBuildingBlocks repository.
+* Download and install [AsTeRICS v2.8 full installer](https://github.com/asterics/AsTeRICS/releases/download/v2.8/Setup_AsTeRICS_2_8.exe) or the [platform independent zip-file](https://github.com/asterics/AsTeRICS/releases/download/v2.8/asterics-are-ape-2.8.zip) containing ARE and APE. If using the zip-file, extract it to a parallel folder of the P4AllBuildingBlocks repository.
 
 * Install the [**Java Development Kit 8 (32-bit)**] (http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
-  * Ensure to set “JAVA_HOME” to the folder where you installed the Java JDK and add the JDK bin path to the Environment Variable “Path”
+  * Verify the java installation by opening a command shell and entering ```javac -version```. In case of trouble, ensure to set “JAVA_HOME” to the folder where you installed the Java JDK and add the JDK bin path to the Environment Variable “Path”
 * Install the [**apache ant build framework (version >= 1.9.1)**] (http://ant.apache.org/bindownload.cgi)
   * Ensure to set “ANT_HOME” to the folder where you installed ant and add the ant bin path to the Environment Variable “Path”
-* __Only for option 2__: Install installer-specific toolkits like [InnoSetup >= 5] (http://www.jrsoftware.org/isdl.php) (for .exe installer), [WiX toolset >= 3.0](http://wixtoolset.org/) or [debian packaging tools] (https://wiki.debian.org/PackageManagement) depending on the required target platform. For more details, read the [JavaFX packaging tutorial] (https://docs.oracle.com/javase/8/docs/technotes/guides/deploy/self-contained-packaging.html#A1324980) 
+* __Only for option 2__: Install installer-specific toolkits like [InnoSetup >= 5] (http://www.jrsoftware.org/isdl.php) (.exe), [WiX toolset >= 3.0](http://wixtoolset.org/) (.msi) or [debian packaging tools] (https://wiki.debian.org/PackageManagement) (.deb) depending on the required target platform. You must run the installer build process on the target platform of the installer. For more details, read the [JavaFX packaging tutorial] (https://docs.oracle.com/javase/8/docs/technotes/guides/deploy/self-contained-packaging.html#A1324980) 
 
-### Creating bundled demo with APE-copy
+### Creating bundled demo with ant APE-copy
 
 * Open a terminal window in the root folder of the P4AllBuildingBlocks repository and call  
 ```ant APE-copy```
@@ -58,12 +62,12 @@ Please ensure to install [InnoSetup >= 5] (http://www.jrsoftware.org/isdl.php) t
 * To test the result, go to the ```build\deploy\bundles``` subfolder and execute the demo installer  
 ```
 cd build\deploy\bundles
-asterics-prosperity4all-bb-demos-0.1.exe
+asterics-prosperity4all-bb-demos-0.2.exe
 ```
 
 The demo will be installed to the user home directory and started automatically.
 
-### Creating single camera mouse demo with APE-copy
+### Creating single camera mouse demo with ant APE-copy
 
 * To build the demo of a single building block, go to the respective subfolder - for the windows-only camera mouse, this is ```CameraInput\FacetrackerLK-windows``` and call ```ant APE-copy```.
 ```
@@ -86,7 +90,7 @@ ant deploy
 * To test the result, go to the ```build\deploy\bundles``` subfolder and execute the demo installer  
 ```
 cd build\deploy\bundles
-cameramouse-facetrackerlk-p4all-bb-demo-0.1.exe
+cameramouse-facetrackerlk-p4all-bb-demo-0.2.exe
 ```
 
 The demo will be installed to the user home directory and started automatically.
