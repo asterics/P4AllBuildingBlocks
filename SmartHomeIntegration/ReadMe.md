@@ -1,4 +1,4 @@
-This building block demonstrates the enOcean environmental control technology integrated in [AsTeRICS] (https://github.com/asterics/AsTeRICS).
+This building block demonstrates an integrated Smart Home environment based on [AsTeRICS] (https://github.com/asterics/AsTeRICS).
 
 For general information about the organization of the whole repository, read the top-level [README file](https://github.com/asterics/P4AllBuildingBlocks/blob/master/README.md).
 
