@@ -12,7 +12,7 @@ Check this screencast explaining and demonstrating the structure and usage of th
 
 ## Demos
 Go to the AsTeRICS [demo page](http://asterics.github.io/AsTeRICS/demos.html) to see the building blocks in action.
-The [demo release](https://github.com/asterics/P4AllBuildingBlocks/releases/tag/asterics-prosperity4all-bb-demos) of the AsTeRICS system includes runnable versions of all these Building blocks and demo applications of their combination.
+The [demo release](https://github.com/asterics/P4AllBuildingBlocks/releases/tag/asterics-prosperity4all-bb-demos-0.2) of the AsTeRICS system includes runnable versions of all these Building blocks and demo applications of their combination.
 
 ## Licenses
 The building blocks are dual licensed. You can choose between [MIT or GPLv3 with CLASSPATH exception](LICENSE.txt) license depending on the selected set of plugins, services and libraries you want to use. Please read the [license section in the wiki](https://github.com/asterics/P4AllBuildingBlocks/wiki#license) for more information.
