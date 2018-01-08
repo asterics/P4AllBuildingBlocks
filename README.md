@@ -22,7 +22,7 @@ This repository is organized in thematic subfolders ('sub-repositories') like ``
 
 The building blocks can be used in two ways depending on your requirements:
 
-* Option 1: Create a downstripped/extracted version of AsTeRICS depending on the given model files using [APE-copy](https://github.com/asterics/AsTeRICS/tree/master/bin/APE#ape-copy). APE-copy is available as a commandline tool  (```APE-copy.sh|APE-copy.bat```) and as a build target (```ant APE-copy```) of the provided ant build infrastructure. You can use the resulting folder and **bundle and deploy it together with your software**.
+* Option 1: Create a downstripped/extracted version of AsTeRICS depending on the given model files using [APE-copy](https://github.com/asterics/AsTeRICS/blob/master/bin/APE/README.md). APE-copy is available as a commandline tool  (```APE-copy.sh|APE-copy.bat```) and as a build target (```ant APE-copy```) of the provided ant build infrastructure. You can use the resulting folder and **bundle and deploy it together with your software**.
 
 * Option 2: Create a **native installer** and **native launcher** for your platform of choice. Currently Windows (.msi, .exe), Linux incl. Raspberry Pi (.deb) and Mac OSX (.dmg) are supported. This option is only available as an ant build target (```ant deploy```).
 
@@ -69,9 +69,9 @@ The demo will be installed to the user home directory and started automatically.
 
 ### Creating single camera mouse demo with ant APE-copy
 
-* To build the demo of a single building block, go to the respective subfolder - for the windows-only camera mouse, this is ```CameraInput\FacetrackerLK-windows``` and call ```ant APE-copy```.
+* To build the demo of a single building block, go to the respective subfolder - for the crossplatform camera mouse, this is ```CameraInput\XFacetrackerLK``` and call ```ant APE-copy```.
 ```
-cd CameraInput\FacetrackerLK-windows
+cd CameraInput\XFacetrackerLK
 ant APE-copy
 ```
 * To test the result, go to the ```build\merged\bin\ARE``` subfolder and start the ARE.
@@ -80,17 +80,18 @@ cd build\merged\bin\ARE
 start.bat
 ```  
 
-### Creating single camera mouse demo installer (.exe)
+### Creating single camera mouse demo installer
 
-* To build the demo of a single building block, go to the respective subfolder - for the windows-only camera mouse, this is ```CameraInput\FacetrackerLK-windows``` and call ```ant deploy```.
+* To create a native installer for a single building block, go to the respective subfolder - for the crossplatform camera mouse, this is ```CameraInput\XFacetrackerLK``` and call ```ant deploy```.
+* The build process must be run on the target platform of the installer (e.g. Windows for .exe, Debian/Ubuntu for .deb). Also check the [dependencies](https://github.com/asterics/AsTeRICS/blob/master/bin/APE/README.md#dependencies) first.
 ```
-cd CameraInput\FacetrackerLK-windows
+cd CameraInput\XFacetrackerLK
 ant deploy
 ```
 * To test the result, go to the ```build\deploy\bundles``` subfolder and execute the demo installer  
 ```
 cd build\deploy\bundles
-cameramouse-facetrackerlk-p4all-bb-demo-0.2.exe
+cameramouse-xfacetrackerlk-p4all-bb-demo-0.2.exe
 ```
 
 The demo will be installed to the user home directory and started automatically.
